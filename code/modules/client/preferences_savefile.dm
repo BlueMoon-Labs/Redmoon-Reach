@@ -642,7 +642,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["customizer_entries"] >> customizer_entries
 	validate_customizer_entries()
 
-
+	redmoon_character_pref_load(S)
 
 	return TRUE
 
