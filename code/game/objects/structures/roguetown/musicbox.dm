@@ -131,7 +131,7 @@
 		toggle_music()
 
 	if(button_selection=="Change Song")
-		var/songlists_selection = input(user, "Which song list?", "\The [src]") as null | anything in list("OTHERWORLDLY"=MUSIC_TAVCAT_OTHERWORLDLY, "GENERIC"=MUSIC_TAVCAT_GENERIC, "OLDSCHOOL"=MUSIC_TAVCAT_OLDSCHOOL, "FUCK"=MUSIC_TAVCAT_FUCK, "PARTY"=MUSIC_TAVCAT_PARTY
+		var/songlists_selection = input(user, "Which song list?", "\The [src]") as null | anything in list("OTHERWORLDLY"=MUSIC_TAVCAT_OTHERWORLDLY, "GENERIC"=MUSIC_TAVCAT_GENERIC, "OLDSCHOOL"=MUSIC_TAVCAT_OLDSCHOOL, "FUCK"=MUSIC_TAVCAT_FUCK, "PARTY"=MUSIC_TAVCAT_PARTY)
 		playsound(loc, pick('sound/misc/keyboard_select (1).ogg','sound/misc/keyboard_select (2).ogg','sound/misc/keyboard_select (3).ogg','sound/misc/keyboard_select (4).ogg'), 100, FALSE, -1)
 		user.visible_message(span_info("[user] presses a button on \the [src]."),span_info("I press a button on \the [src]."))
 		var/chosen_songlists_selection = null
