@@ -1169,7 +1169,7 @@
 							if(user && surname)
 								var/surname_trimmed = copytext(surname, 2) // Remove leading space if present
 								user.say("I hereby wed you [surname_trimmed]s.")
-							priority_announce("[thegroom.real_name] has married [thebride.real_name]!", title = "Holy Union!", sound = 'sound/misc/bell.ogg')
+							priority_announce("[thegroom.real_name] заключает Эоров союз с [thebride.real_name]!", title = "Святое Объединение!", sound = 'sound/misc/bell.ogg')
 							qdel(A)
 							marriage = TRUE
 						else
