@@ -37,9 +37,12 @@ GLOBAL_LIST_INIT(freqtospan, list(
 /atom/movable/proc/send_speech(message, range = 7, obj/source = src, bubble_type, list/spans, datum/language/message_language = null, message_mode)
 	var/rendered = compose_message(src, message_language, message, , spans, message_mode)
 	var/list/hearers = get_hearers_in_view(range, source)
-	for(var/_AM in hearers)
-		var/atom/movable/AM = _AM
-		AM.Hear(rendered, src, message_language, message, , spans, message_mode)
+	for(var/atom/movable/hearing_movable as anything in hearers)
+		if(!hearing_movable) // Should not get nulls, but just in case.
+			stack_trace("somehow theres a null returned from get_hearers_in_view() in send_speech!")
+			continue
+
+		hearing_movable.Hear(rendered, src, message_language, message, , spans, message_mode)
 
 	if(SEND_SIGNAL(src, COMSIG_MOVABLE_QUEUE_BARK, hearers, args) || vocal_bark || vocal_bark_id)
 		for(var/mob/M in hearers)
@@ -75,15 +78,15 @@ GLOBAL_LIST_INIT(freqtospan, list(
 			namepart = "[H.get_face_name()]" //So "fake" speaking like in hallucinations does not give the speaker away if disguised
 		if(H.voice_color)
 			colorpart = "<span style='color:#[H.voice_color];text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;'>"
-		if(H.client && H.client.patreonlevel() >= GLOB.patreonsaylevel)
-			spans |= SPAN_PATREON_SAY
+		if(H.client && H.client.prefs.patreon_say_color_enabled && H.client.patreon_colored_say_allowed)
+			spans |= "#[H.client.prefs.patreon_say_color]"
 	if(speaker.voicecolor_override)
 		colorpart = "<span style='color:#[speaker.voicecolor_override];text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;'>"
 	//End name span.
 	var/endspanpart = "</span></span>"
 
 	//Message
-	var/messagepart = " <span class='message'>[lang_treat(speaker, message_language, raw_message, spans, message_mode)]</span></span>"
+	var/messagepart = " <span class='message'>[lang_treat(speaker, message_language, "[raw_message]", spans, message_mode)]</span></span>"
 
 	var/arrowpart = ""
 
@@ -222,13 +225,17 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	return "[copytext_char("[freq]", 1, 4)].[copytext_char("[freq]", 4, 5)]" */
 
 /proc/attach_spans(input, list/spans)
-	return "[message_spans_start(spans)][input]</span>"
+	return "[message_spans_start(spans)][input]</span></span>"
 
 /proc/message_spans_start(list/spans)
 	var/output = "<span class='"
+	var/textcolor = null
 	for(var/S in spans)
-		output = "[output][S] "
-	output = "[output]'>"
+		if(copytext(S, 1, 2) == "#") // All classes that start with a # are colors since # cannot be the first character of a css class.
+			textcolor = S //Vrell - Only needs the "last" color since that one will overwrrite it.
+		else
+			output = "[output][S] "
+	output = "[output]'><span style='color:[textcolor]'>"
 	return output
 
 /proc/say_test(text)
