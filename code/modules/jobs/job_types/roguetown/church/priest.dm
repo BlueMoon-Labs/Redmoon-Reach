@@ -170,7 +170,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 		var/dispjob = mind.assigned_role
 		removeomen(OMEN_NOLORD)
 		say("By the authority of the gods, I pronounce you Ruler of all Scarlet Reach!")
-		priority_announce("[real_name] the [dispjob] has named [HU.real_name] the inheritor of SCARLET REACH!", title = "Long Live [HU.real_name]!", sound = 'sound/misc/bell.ogg')
+		priority_announce("[real_name], [dispjob], [HU.real_name] объявляется новым наследником Алого Предела!", title = "Долгой жизни [HU.real_name]!", sound = 'sound/misc/bell.ogg')
 		var/datum/job/roguetown/nomoredukes = SSjob.GetJob("Grand Duke")
 		if(nomoredukes)
 			nomoredukes.total_positions = -1000 //We got what we got now.
@@ -192,7 +192,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 
         if (inputty in GLOB.excommunicated_players)
             GLOB.excommunicated_players -= inputty
-            priority_announce("[real_name] has forgiven [inputty]. Their patron hears their prayer once more!", title = "Hail the Ten!", sound = 'sound/misc/bell.ogg')
+            priority_announce("[real_name] прощает [inputty]. Покровитель снова слышит молитвы [inputty]!", title = "Слава Десяти!", sound = 'sound/misc/bell.ogg')
 
             for (var/mob/living/carbon/human/H in GLOB.player_list)
                 if (H.real_name == inputty)
@@ -234,7 +234,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
             return FALSE
 
         GLOB.excommunicated_players += inputty
-        priority_announce("[real_name] has excommunicated [inputty]!", title = "SHAME", sound = 'sound/misc/excomm.ogg')
+        priority_announce("[real_name] отлучает [inputty] от церкви!", title = "ПОЗОР", sound = 'sound/misc/excomm.ogg')
 
 /mob/living/carbon/human/proc/churchannouncement()
 	set name = "Announcement"
@@ -246,7 +246,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 		if(!istype(get_area(src), /area/rogue/indoors/town/church/chapel))
 			to_chat(src, span_warning("I need to do this from the chapel."))
 			return FALSE
-		priority_announce("[inputty]", title = "The Priest Speaks", sound = 'sound/misc/bell.ogg', sender = src)
+		priority_announce("[inputty]", title = "Высший Жрец Говорит", sound = 'sound/misc/bell.ogg', sender = src)
 
 /mob/living/carbon/human/proc/churcheapostasy()
 	set name = "Apostasy"
@@ -266,7 +266,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 
 	if (inputty in GLOB.apostasy_players)
 		GLOB.apostasy_players -= inputty
-		priority_announce("[real_name] has forgiven [inputty]. Their patron hears their prayer once more!", title = "Hail the Ten!", sound = 'sound/misc/bell.ogg')
+		priority_announce("[real_name] прощает [inputty]. Покровитель снова слышит молитвы [inputty]!", title = "Слава Десяти!", sound = 'sound/misc/bell.ogg')
 
 		for (var/mob/living/carbon/human/H in GLOB.player_list)
 			if (H.real_name == inputty)
@@ -292,7 +292,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 			else
 				to_chat(H, span_warning("A holy silence falls upon you..."))
 
-			priority_announce("[real_name] has cast apostasy upon [inputty]. Their prayers fall on deaf ears.", title = "SHAME", sound = 'sound/misc/excomm.ogg')
+			priority_announce("[real_name] объявляет [inputty] отступником. Святая Тишина - ваш покровитель.", title = "ПОЗОР", sound = 'sound/misc/excomm.ogg')
 			return TRUE
 
 	if (!found)
@@ -377,7 +377,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 
             if (H.is_cursed(temp))
                 H.remove_curse(temp)
-                priority_announce("[real_name] has lifted [curse_pick] from [H.real_name]!", title = "Mercy of the Faith", sound = 'sound/misc/bell.ogg')
+                priority_announce("[real_name] снимает проклятие [curse_pick] с [H.real_name]!", title = "Милосердие Веры", sound = 'sound/misc/bell.ogg')
             else
                 if (length(H.curses) >= 1)
                     to_chat(src, span_warning("[H.real_name] is already afflicted by another curse."))
@@ -386,12 +386,12 @@ GLOBAL_LIST_EMPTY(heretical_players)
                 // Check if target is a bandit, wretch, lich, or vampire lord - silently fail for outlaws and undead
                 if (H.mind?.assigned_role == "Bandit" || H.mind?.special_role == "Bandit" || H.mind?.assigned_role == "Wretch" || H.mind?.special_role == "Lich" || H.mind?.special_role == "Vampire Lord")
                     // Curse appears to work but has no effect on outlaws and undead
-                    priority_announce("[real_name] has cursed [H.real_name] with [curse_pick]!", title = "Judgment of the Gods", sound = 'sound/misc/excomm.ogg')
+                    priority_announce("[real_name] насылает проклятие [curse_pick] на [H.real_name]!", title = "Божественный Суд", sound = 'sound/misc/excomm.ogg')
                     last_curse_time = world.time // set cooldown
                     return
 
                 H.add_curse(curse_type)
-                priority_announce("[real_name] has cursed [H.real_name] with [curse_pick]!", title = "Judgment of the Gods", sound = 'sound/misc/excomm.ogg')
+                priority_announce("[real_name] насылает проклятие [curse_pick] на [H.real_name]!", title = "Божественный Суд", sound = 'sound/misc/excomm.ogg')
 
             last_curse_time = world.time // set cooldown
             return

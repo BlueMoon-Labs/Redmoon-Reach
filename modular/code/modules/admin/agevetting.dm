@@ -9,7 +9,7 @@ GLOBAL_PROTECT(agevetted_list)
 /client/proc/check_agevet()
 	if(LAZYACCESS(GLOB.agevetted_list, ckey) || holder)
 		return TRUE
-	return FALSE
+	return TRUE // REDMOON ADD: Благодаря изменению объявлению не будет Вайтлиста в Вайтлисте. Было FALSE.
 
 /mob/proc/check_agevet()
 	if(client)
