@@ -17,9 +17,9 @@
 	WRITE_FILE(S["bark_variance"]						, bark_variance)
 
 /datum/preferences/proc/redmoon_save_preferences(savefile/S)
-	WRITE_FILE(S["donut_bonus_received"]				, donut_bonus_received) // PQ bonus for supporters
+	WRITE_FILE(S["pq_bonus_received"]				, pq_bonus_received) // PQ bonus for supporters
 
 /datum/preferences/proc/redmoon_load_preferences(savefile/S)
 
 	// PQ bonus for supporters
-	S["donut_bonus_received"]    						>> donut_bonus_received
+	S["pq_bonus_received"]    						>> pq_bonus_received

@@ -1,5 +1,5 @@
 /datum/preferences
-	var/donut_bonus_received = FALSE
+	var/pq_bonus_received = FALSE
 	// Vocal bark prefs
 	var/bark_id = "mutedc3"
 	var/bark_speed = 4
