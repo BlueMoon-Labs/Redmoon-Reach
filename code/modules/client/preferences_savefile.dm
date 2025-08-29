@@ -274,6 +274,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//ROGUETOWN
 	parallax = PARALLAX_INSANE
 
+	redmoon_load_preferences(S)
 	verify_keybindings_valid()
 	return TRUE
 
@@ -353,6 +354,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["prefer_old_chat"], prefer_old_chat)
 	WRITE_FILE(S["patreon_say_color"], patreon_say_color)
 	WRITE_FILE(S["patreon_say_color_enabled"], patreon_say_color_enabled)
+
+	redmoon_save_preferences(S)
 	
 	return TRUE
 
@@ -754,7 +757,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	else
 		WRITE_FILE(S["loadout3"] , null)
 
-
+	redmoon_character_pref_save(S)
 
 	return TRUE
 
