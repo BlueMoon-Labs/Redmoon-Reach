@@ -2,7 +2,6 @@
 #define ANTAGCOIN_WEREWOLF_COST		75
 #define ANTAGCOIN_MANIAC_COST		50
 #define ANTAGCOIN_GIFT_COST			50
-#define ANTAGCOIN_CULT_COST			25
 #define ANTAGCOIN_REVOLUTION_COST	10
 
 /datum/triumph_buy/antagcoin
@@ -41,18 +40,6 @@
 	visible_on_active_menu = FALSE
 
 /datum/triumph_buy/antagcoin/maniac/on_buy()
-	owner_ckey = usr.ckey
-	SStriumphs.post_equip_calls[triumph_buy_id] = src
-
-/datum/triumph_buy/antagcoin/cult
-	triumph_buy_id = "Antagcoin: Cult"
-	desc = "Antagcoin: Cult! (Minimum 40 players)"
-	triumph_cost = ANTAGCOIN_CULT_COST
-	category = TRIUMPH_CAT_CHARACTER
-	pre_round_only = FALSE
-	visible_on_active_menu = FALSE
-
-/datum/triumph_buy/antagcoin/cult/on_buy()
 	owner_ckey = usr.ckey
 	SStriumphs.post_equip_calls[triumph_buy_id] = src
 
@@ -195,6 +182,5 @@
 #undef ANTAGCOIN_LICH_COST
 #undef ANTAGCOIN_WEREWOLF_COST
 #undef ANTAGCOIN_MANIAC_COST
-#undef ANTAGCOIN_CULT_COST
 #undef ANTAGCOIN_REVOLUTION_COST
 #undef ANTAGCOIN_GIFT_COST
