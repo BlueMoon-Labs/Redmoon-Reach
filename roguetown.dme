@@ -2487,7 +2487,6 @@
 #include "modular_redmoon\code\modules\client\client_procs.dm"
 #include "modular_redmoon\code\modules\tgs\roundspoke.dm"
 #include "modular_redmoon\code\triumphs\triumph_buy_datums\antags.dm"
-#include "modular_redmoon\code\triumphs\triumph_buy_datums\giant.dm"
 #include "modular_redmoon\code\triumphs\triumph_buy_datums\noble.dm"
 #include "modular_redmoon\code\triumphs\triumph_buy_datums\pick_all_jobs_as_any_race.dm"
 #include "modular_redmoon\code\triumphs\triumph_buy_datums\pick_any_class.dm"
