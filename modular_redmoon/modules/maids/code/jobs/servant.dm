@@ -7,5 +7,3 @@
 	belt = /obj/item/storage/belt/rogue/leather/sash/maid
 	backr = null
 	backl = null
-	beltr = /obj/item/storage/keyring/servant
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
