@@ -384,7 +384,7 @@ GLOBAL_LIST_INIT(laws_of_the_land, initialize_laws_of_the_land())
 
 /proc/purge_laws()
 	GLOB.laws_of_the_land = list()
-	priority_announce("Все законы были отменены.!", "ЗАКОНЫ ОТМЕНЕНЫ", 'sound/misc/lawspurged.ogg', "Captain")
+	priority_announce("Все законы были отменены!", "ЗАКОНЫ ОТМЕНЕНЫ", 'sound/misc/lawspurged.ogg', "Captain")
 
 /proc/purge_decrees()
 	GLOB.lord_decrees = list()
