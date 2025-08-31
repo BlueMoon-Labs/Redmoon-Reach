@@ -2483,6 +2483,8 @@
 #include "modular_redmoon\code\datums\barks\general.dm"
 #include "modular_redmoon\code\datums\barks\say.dm"
 #include "modular_redmoon\code\datums\special_traits\tiny.dm"
+#include "modular_redmoon\code\datums\status_effects\debuff.dm"
+#include "modular_redmoon\code\game\area\roguetownareas.dm"
 #include "modular_redmoon\code\mob\living.dm"
 #include "modular_redmoon\code\modules\client\client_procs.dm"
 #include "modular_redmoon\code\modules\tgs\roundspoke.dm"

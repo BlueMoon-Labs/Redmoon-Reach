@@ -42,6 +42,10 @@
 	for(var/datum/advclass/CHECKS in SSrole_class_handler.sorted_class_categories[CTAG_ALLCLASS])
 		if(CTAG_DISABLED in CHECKS.category_tags)
 			continue
+		if(CTAG_BANDIT in CHECKS.category_tags)
+			continue
+		if(CTAG_KNIGHT in CHECKS.category_tags)
+			continue
 		possible_classes += CHECKS
 
 	var/datum/advclass/C = input(H.client, "What is my class?", "Adventure") as null|anything in possible_classes
