@@ -1,3 +1,5 @@
+// OVERSEER
+
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/inq/overseer
 	name = "overseer jacket"
 	desc = "Padded jacket that provides adequate protection against unarmed innocents."
@@ -110,3 +112,14 @@
 				return list("shrink" = 0.4,"sx" = -5,"sy" = -3,"nx" = 0,"ny" = 0,"wx" = 0,"wy" = -3,"ex" = 2,"ey" = -3,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 8)
 			if("onbelt")
 				return list("shrink" = 0.32,"sx" = -3,"sy" = -8,"nx" = 6,"ny" = -8,"wx" = -1,"wy" = -8,"ex" = 3,"ey" = -8,"nturn" = 180,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 1,"sflip" = 0,"wflip" = 0,"eflip" = 8,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+
+// INQUISITOR CAP
+
+/obj/item/clothing/head/roguetown/inqhat/cap
+	name = "inquisitorial cap"
+	desc = "To keep ones vision away from the heavens, and focused on the sin beneath the soil."
+	icon_state = "inqcap"
+	item_state = "inqcap"
+	icon = 'modular_redmoon/modules/overseers_equipment/icons/inqcap.dmi'
+	mob_overlay_icon = 'modular_redmoon/modules/overseers_equipment/icons/onmob/inqcap_onmob.dmi'
