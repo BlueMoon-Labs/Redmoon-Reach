@@ -44,7 +44,11 @@
 			continue
 		if(CTAG_BANDIT in CHECKS.category_tags)
 			continue
-		if(CTAG_KNIGHT in CHECKS.category_tags)
+		if(CTAG_ROYALGUARD in CHECKS.category_tags)
+			continue
+		if(CTAG_TEMPLAR in CHECKS.category_tags)
+			continue
+		if(CTAG_CAPTAIN in CHECKS.category_tags)
 			continue
 		possible_classes += CHECKS
 
