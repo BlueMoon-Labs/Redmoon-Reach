@@ -113,6 +113,7 @@
 		calling = S
 		S.called_by = src
 		parent_object.update_icon()
+		calling.parent_object.say("Jabberline coupling call from SCOM #[nightcall]!", spans = list("info"))
 
 		for(var/i in 1 to 10)
 			if(!calling)
@@ -171,11 +172,11 @@
 	parent_object.update_icon()
 
 /datum/scommodule/proc/ring_ring()
-	playsound(parent_object, 'sound/vo/mobs/rat/rat_life.ogg', 100, TRUE, -1)
+	playsound(parent_object, 'sound/vo/mobs/rat/rat_life.ogg', 100, TRUE, 3)
 	var/oldx = parent_object.pixel_x
 	animate(parent_object, pixel_x = oldx+1, time = 0.5)
-	animate(parent_object, pixel_x = oldx-1, time = 0.5)
-	animate(parent_object, pixel_x = oldx, time = 0.5)
+	animate(pixel_x = oldx-1, time = 0.5)
+	animate(pixel_x = oldx, time = 0.5)
 
 /datum/scommodule/proc/examine(mob/user)
 	if(!is_setup)
@@ -855,35 +856,33 @@
 /obj/item/scomstone/bad/garrison/scominit()
 	scom.setup(src, FALSE, FALSE, TRUE, FALSE, DEFAULT_GARRISON_COLOR, 'sound/misc/garrisonscom.ogg', 100, SCOM_TARGET_COMMONS, TRUE, TRUE, FALSE, FALSE)
 
-// Curse this deriving from hat but the other scoms deriving from item.
 /obj/item/clothing/head/roguetown/crown/serpcrown
 	name = "Crown of Scarlet Reach"
 	article = "the"
 	desc = "Heavy is the head that wears this."
 	icon_state = "serpcrown"
-	//dropshrink = 0
 	dynamic_hair_suffix = null
 	sellprice = 200
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	anvilrepair = /datum/skill/craft/armorsmithing
 	visual_replacement = /obj/item/clothing/head/roguetown/crown/fakecrown
-	var/hearrange = 0 // Only hearable by wearer
-	flags_1 = HEAR_1
-	is_important = TRUE
 	var/datum/scommodule/scom = new/datum/scommodule()
+	var/hearrange = 0 // Only hearable by wearer
+	is_important = TRUE
 
 /obj/item/clothing/head/roguetown/crown/serpcrown/Initialize()
 	. = ..()
+	if(SSroguemachine.crown)
+		qdel(src)
+	else
+		SSroguemachine.crown = src
 	scom.setup(src, TRUE, TRUE, TRUE, FALSE, GARRISON_CROWN_COLOR, 'sound/misc/scom.ogg', 100, SCOM_TARGET_COMMONS, TRUE, TRUE, FALSE, FALSE)
+	become_hearing_sensitive()
 
 /obj/item/clothing/head/roguetown/crown/serpcrown/proc/anti_stall()
 	src.visible_message(span_warning("The Crown of Scarlet Reach crumbles to dust, the ashes spiriting away in the direction of the Keep."))
+	SSroguemachine.crown = null //Do not harddel.
 	qdel(src) //Anti-stall
-
-/obj/item/clothing/head/roguetown/crown/serpcrown/Destroy()
-	scom.cleanup()
-	qdel(scom)
-	return ..()
 
 /obj/item/clothing/head/roguetown/crown/serpcrown/attack_right(mob/living/carbon/human/user)
 	user.changeNext_move(CLICK_CD_MELEE)
@@ -925,3 +924,9 @@
 		I.send_speech(message, hearrange, I, , spans, message_language=language)
 	else
 		send_speech(message, hearrange, src, , spans, message_language=language)
+
+/obj/item/clothing/head/roguetown/crown/serpcrown/Destroy()
+	lose_hearing_sensitivity()
+	scom.cleanup()
+	qdel(scom)
+	return ..()

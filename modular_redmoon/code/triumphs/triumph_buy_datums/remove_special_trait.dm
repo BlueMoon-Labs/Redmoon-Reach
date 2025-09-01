@@ -1,7 +1,7 @@
 /datum/triumph_buy/remove_special_trait
 	triumph_buy_id = "RemoveSpecialTrait"
 	desc = "Remove Special Trait!"
-	triumph_cost = 25
+	triumph_cost = 5
 	category = TRIUMPH_CAT_CHARACTER
 	pre_round_only = FALSE
 	visible_on_active_menu = FALSE

@@ -1,7 +1,7 @@
 /datum/triumph_buy/tiny
 	triumph_buy_id = "Tiny"
 	desc = "Tiny! Not working on a kobold, seelie, verminvolk or a dwarf. Special Trait. Don't use, if you already have Special Trait."
-	triumph_cost = 25
+	triumph_cost = 10
 	category = TRIUMPH_CAT_CHARACTER
 	pre_round_only = FALSE
 	visible_on_active_menu = FALSE

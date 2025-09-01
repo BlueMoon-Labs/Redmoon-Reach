@@ -1,7 +1,7 @@
 /datum/triumph_buy/bleublood
 	triumph_buy_id = "Bleublood"
 	desc = "Bleublood! Noble Blood! Special Trait. Don't use, if you already have Special Trait."
-	triumph_cost = 25
+	triumph_cost = 15
 	category = TRIUMPH_CAT_CHARACTER
 	pre_round_only = FALSE
 	visible_on_active_menu = FALSE
