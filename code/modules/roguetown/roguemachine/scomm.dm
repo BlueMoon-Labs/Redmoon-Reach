@@ -716,6 +716,7 @@
 /obj/structure/listeningdeviceactive/Initialize()
 	. = ..()
 	scom.setup(src, TRUE, TRUE, FALSE, FALSE, DEFAULT_GARRISON_COLOR, 'sound/vo/mobs/rat/rat_life.ogg', 100, SCOM_TARGET_INQUISITOR, FALSE, FALSE, FALSE, FALSE)
+	become_hearing_sensitive() // idk why it can't hear
 
 /obj/structure/listeningdeviceactive/attack_right(mob/user)
 	to_chat(user, span_info("I begin dismounting the listen-stone..."))
@@ -726,10 +727,15 @@
 
 /obj/structure/listeningdeviceactive/Destroy()
 	scom.cleanup()
+	lose_hearing_sensitivity() //stops it from hearing when destroyed
 	qdel(scom)
 	return ..()
 
 /obj/structure/listeningdeviceactive/Hear(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, message_mode, original_message)
+	var/maxdis = 5 //temporary fix i'm a little bit dumb so it's the best i can do for now. also by default it hears ho like 7-8 tiles so i think it's kinda OP
+	var/dist = get_dist(loc, speaker) // checks distance to the speaker
+	if(dist >= maxdis) // compares distance to the maximum
+		return // too far say bye-bye to ears
 	scom.scom_hear(speaker, message_language, raw_message, FALSE)
 
 /obj/structure/broadcast_horn
