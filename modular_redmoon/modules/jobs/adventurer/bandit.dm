@@ -1,3 +1,3 @@
 /datum/job/roguetown/bandit
-	min_pq = 10
+	min_pq = 15
 	max_pq = null
