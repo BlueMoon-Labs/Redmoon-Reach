@@ -283,6 +283,10 @@
 /datum/special_trait/bleublood/on_apply(mob/living/carbon/human/character, silent)
 	ADD_TRAIT(character, TRAIT_NOBLE, "[type]")
 	character.adjust_skillrank_up_to(/datum/skill/misc/reading, 2, TRUE)
+	SStreasury.noble_incomes[character] += 15
+	var/obj/item/pouch = new /obj/item/storage/belt/rogue/pouch/coins/virtuepouch(get_turf(character))
+	character.put_in_hands(pouch, forced = TRUE)
+	character.mind.special_items["Heirloom Amulet"] = /obj/item/clothing/neck/roguetown/ornateamulet/noble
 
 /datum/special_trait/richpouch
 	name = "Rich Pouch"
@@ -326,7 +330,7 @@
 	name = "Giant"
 	greet_text = span_notice("I've always been called a giant. I am valued for my stature, but, this world made for smaller folk has forced me to move cautiously.")
 	req_text = "Not a kobold, verminvolk or a dwarf"
-	restricted_races = list(/datum/species/anthromorphsmall, /datum/species/dwarf/mountain, /datum/species/kobold)
+	// restricted_races = list(/datum/species/anthromorphsmall, /datum/species/dwarf/mountain, /datum/species/kobold)
 	weight = 50
 
 /datum/special_trait/backproblems/on_apply(mob/living/carbon/human/character)
