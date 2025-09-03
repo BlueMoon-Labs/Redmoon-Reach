@@ -194,7 +194,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 
 		if (inputty in GLOB.excommunicated_players)
 			GLOB.excommunicated_players -= inputty
-      priority_announce("[real_name] прощает [inputty]. Покровитель снова слышит молитвы [inputty]!", title = "СЛАВА ДЕСЯТИ", sound = 'sound/misc/bell.ogg')
+			priority_announce("[real_name] прощает [inputty]. Покровитель снова слышит молитвы [inputty]!", title = "СЛАВА ДЕСЯТИ", sound = 'sound/misc/bell.ogg')
 
 			for (var/mob/living/carbon/human/H in GLOB.player_list)
 				if (H.real_name == inputty)
@@ -236,7 +236,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 			return FALSE
 
 		GLOB.excommunicated_players += inputty
-    priority_announce("[real_name] отлучает [inputty] от церкви!", title = "ПОЗОР", sound = 'sound/misc/excomm.ogg')
+		priority_announce("[real_name] отлучает [inputty] от церкви!", title = "ПОЗОР", sound = 'sound/misc/excomm.ogg')
 
 /mob/living/carbon/human/proc/churchannouncement()
 	set name = "Announcement"
@@ -407,7 +407,7 @@ code\modules\admin\verbs\divinewrath.dm has a variant with all the gods so keep 
 
 		if (H.is_cursed(temp))
 			H.remove_curse(temp)
-      priority_announce("[real_name] снимает проклятие [curse_pick] с [H.real_name]!", title = "ИСКУПЛЕНИЕ", sound = 'sound/misc/bell.ogg')
+			priority_announce("[real_name] снимает проклятие [curse_pick] с [H.real_name]!", title = "ИСКУПЛЕНИЕ", sound = 'sound/misc/bell.ogg')
 			message_admins("DIVINE CURSE: [real_name] ([ckey]) has removed [curse_pick] from [H.real_name]) ") //[ADMIN_LOOKUPFLW(user)] Maybe add this here if desirable but dunno.
 			log_game("DIVINE CURSE: [real_name] ([ckey]) has removed [curse_pick] from [H.real_name])")
 		else
@@ -428,7 +428,7 @@ code\modules\admin\verbs\divinewrath.dm has a variant with all the gods so keep 
 			COOLDOWN_START(src, priest_curse, PRIEST_CURSE_COOLDOWN)
 			H.add_curse(curse_type)
 			
-      priority_announce("[real_name] насылает проклятие [curse_pick] на [H.real_name]! ПОЗОР!", title = "ПРИГОВОР", sound = 'sound/misc/excomm.ogg')
+			priority_announce("[real_name] насылает проклятие [curse_pick] на [H.real_name]! ПОЗОР!", title = "ПРИГОВОР", sound = 'sound/misc/excomm.ogg')
 			message_admins("DIVINE CURSE: [real_name] ([ckey]) has stricken [H.real_name] ([H.ckey] with [curse_pick])")
 			log_game("DIVINE CURSE: [real_name] ([ckey]) has stricken [H.real_name] ([H.ckey] with [curse_pick])")
 
