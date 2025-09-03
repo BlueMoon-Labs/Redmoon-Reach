@@ -102,7 +102,7 @@
 	name = "Flip Me"
 	desc = "Зло, которое нужно привнести в этот мир. (RMB)"
 	icon_state = "coin_valid"
-	icon = 'modular_redmoon/icons/economy.dmi'
+	icon = 'zzz_redmoon/icons/economy.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	var/antagcoin_role
 	var/sideslist = list("valid", "salad")

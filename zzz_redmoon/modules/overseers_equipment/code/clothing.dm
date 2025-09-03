@@ -4,9 +4,9 @@
 	name = "overseer jacket"
 	desc = "Padded jacket that provides adequate protection against unarmed innocents."
 	icon_state = "overseerjacket"
-	icon = 'modular_redmoon/modules/overseers_equipment/icons/overseer.dmi'
-	mob_overlay_icon = 'modular_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
-	sleeved = 'modular_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
+	icon = 'zzz_redmoon/modules/overseers_equipment/icons/overseer.dmi'
+	mob_overlay_icon = 'zzz_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
+	sleeved = 'zzz_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 	boobed = TRUE
 
@@ -14,9 +14,9 @@
 	name = "vice overseer coat"
 	desc = "Heavy, reinforced coat with a tasteful burgundy covering will not leave anyone indifferent."
 	icon_state = "viceseercoat"
-	icon = 'modular_redmoon/modules/overseers_equipment/icons/overseer.dmi'
-	mob_overlay_icon = 'modular_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
-	sleeved = 'modular_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
+	icon = 'zzz_redmoon/modules/overseers_equipment/icons/overseer.dmi'
+	mob_overlay_icon = 'zzz_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
+	sleeved = 'zzz_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
 	boobed = TRUE
 
 /obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat/overseer/ComponentInitialize()	//No movement rustle component.
@@ -41,9 +41,9 @@
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "armored overseer coat"
 	icon_state = "viceseercoat"
-	icon = 'modular_redmoon/modules/overseers_equipment/icons/overseer.dmi'
-	mob_overlay_icon = 'modular_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
-	sleeved = 'modular_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
+	icon = 'zzz_redmoon/modules/overseers_equipment/icons/overseer.dmi'
+	mob_overlay_icon = 'zzz_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
+	sleeved = 'zzz_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat/overseer/armored/ComponentInitialize()
 	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_PLATE_STEP)
@@ -54,25 +54,25 @@
 	desc = "A pair of washed-out heavy trousers in grey colors."
 	icon_state = "overseerpants"
 	item_state = "overseerpants"
-	icon = 'modular_redmoon/modules/overseers_equipment/icons/overseer.dmi'
-	mob_overlay_icon = 'modular_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
-	sleeved = 'modular_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
+	icon = 'zzz_redmoon/modules/overseers_equipment/icons/overseer.dmi'
+	mob_overlay_icon = 'zzz_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
+	sleeved = 'zzz_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
 
 /obj/item/clothing/gloves/roguetown/otavan/overseer
 	name = "leather gloves"
 	desc = "Black leather gloves, adorned with bright strips."
 	icon_state = "viceseergloves"
 	item_state = "viceseergloves"
-	icon = 'modular_redmoon/modules/overseers_equipment/icons/overseer.dmi'
-	mob_overlay_icon = 'modular_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
+	icon = 'zzz_redmoon/modules/overseers_equipment/icons/overseer.dmi'
+	mob_overlay_icon = 'zzz_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
 
 /obj/item/storage/belt/rogue/leather/overseer
 	name = "belt with pouches"
 	desc = "Leather belt with some pouches attached."
 	icon_state = "overseerbelt"
 	item_state = "overseerbelt"
-	icon = 'modular_redmoon/modules/overseers_equipment/icons/overseer.dmi'
-	mob_overlay_icon = 'modular_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
+	icon = 'zzz_redmoon/modules/overseers_equipment/icons/overseer.dmi'
+	mob_overlay_icon = 'zzz_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	component_type = /datum/component/storage/concrete/roguetown/belt/overseer
 
@@ -86,16 +86,16 @@
 	desc = "You wouldn't hide your face if there were no reasons for."
 	icon_state = "overseerhood"
 	item_state = "overseerhood"
-	icon = 'modular_redmoon/modules/overseers_equipment/icons/overseer.dmi'
-	mob_overlay_icon = 'modular_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
+	icon = 'zzz_redmoon/modules/overseers_equipment/icons/overseer.dmi'
+	mob_overlay_icon = 'zzz_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
 
 /obj/item/clothing/head/roguetown/helmet/overseer
 	name = "overseer mask"
 	desc = "Silver mask covered in protective runes, depicting Psydon's ENDURING visage."
 	icon_state = "viceseermask"
 	item_state = "viceseermask"
-	icon = 'modular_redmoon/modules/overseers_equipment/icons/overseer.dmi'
-	mob_overlay_icon = 'modular_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
+	icon = 'zzz_redmoon/modules/overseers_equipment/icons/overseer.dmi'
+	mob_overlay_icon = 'zzz_redmoon/modules/overseers_equipment/icons/onmob/overseer_onmob.dmi'
 	max_integrity = 250
 	flags_inv = HIDEFACE
 	body_parts_covered = FACE|HEAD|HAIR|EARS|NOSE
@@ -121,5 +121,5 @@
 	desc = "To keep ones vision away from the heavens, and focused on the sin beneath the soil."
 	icon_state = "inqcap"
 	item_state = "inqcap"
-	icon = 'modular_redmoon/modules/overseers_equipment/icons/inqcap.dmi'
-	mob_overlay_icon = 'modular_redmoon/modules/overseers_equipment/icons/onmob/inqcap_onmob.dmi'
+	icon = 'zzz_redmoon/modules/overseers_equipment/icons/inqcap.dmi'
+	mob_overlay_icon = 'zzz_redmoon/modules/overseers_equipment/icons/onmob/inqcap_onmob.dmi'
