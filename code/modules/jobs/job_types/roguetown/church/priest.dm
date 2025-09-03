@@ -192,7 +192,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 
         if (inputty in GLOB.excommunicated_players)
             GLOB.excommunicated_players -= inputty
-            priority_announce("[real_name] прощает [inputty]. Покровитель снова слышит молитвы [inputty]!", title = "Слава Десяти!", sound = 'sound/misc/bell.ogg')
+            priority_announce("[real_name] прощает [inputty]. Покровитель снова слышит молитвы [inputty]!", title = "СЛАВА ДЕСЯТИ!", sound = 'sound/misc/bell.ogg')
 
             for (var/mob/living/carbon/human/H in GLOB.player_list)
                 if (H.real_name == inputty)
@@ -234,7 +234,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
             return FALSE
 
         GLOB.excommunicated_players += inputty
-        priority_announce("[real_name] отлучает [inputty] от церкви!", title = "ПОЗОР", sound = 'sound/misc/excomm.ogg')
+        priority_announce("[real_name] отлучает [inputty] от церкви!", title = "ПОЗОР!", sound = 'sound/misc/excomm.ogg')
 
 /mob/living/carbon/human/proc/churchannouncement()
 	set name = "Announcement"
