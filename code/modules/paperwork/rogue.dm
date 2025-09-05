@@ -325,9 +325,10 @@
 			to_chat(user, span_warning("This slip isn't meant for me."))
 	else if(!sliptype)
 		attemptsign(user)
-	else
+	else if (M.client != null)
 		attemptsign(M, user)
-	
+	else
+		return
 /obj/item/paper/inqslip/attack_self(mob/user)
 	if(!signed)
 		to_chat(user, span_warning("It hasn't been signed yet. Why would I seal it?"))
