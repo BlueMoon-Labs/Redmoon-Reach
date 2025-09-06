@@ -223,6 +223,7 @@
 	SSroguemachine.scomm_garrison -= src
 	SSroguemachine.scomm_matthios -= src
 
+/*
 /datum/scommodule/proc/scom_hear(atom/movable/speaker, message_language, raw_message, crown = FALSE, list/tspans = list())
 	if(!is_setup)
 		throw EXCEPTION("YOU MUST CALL 'setup()' ON A SCOMMODULE BEFORE USING IT!!!")
@@ -271,6 +272,7 @@
 			if(common_talk_allowed)
 				for(var/datum/scommodule/S in SSroguemachine.scomm_commons)
 					S.repeat_message(colored_message, src, usedcolor, message_language, tspans, target)
+*/
 
 /datum/scommodule/proc/repeat_message(message, datum/scommodule/A, tcolor, message_language = null, list/tspans = list(), target = SCOM_TARGET_COMMONS)
 	if(!is_setup || !parent_object)
@@ -664,8 +666,10 @@
 	grid_height = 32
 	hearrange = 0
 
+/*
 /obj/item/scomstone/speakerinq/scominit()
 	scom.setup(src, FALSE, FALSE, TRUE, FALSE, DEFAULT_GARRISON_COLOR, 'sound/vo/mobs/rat/rat_life.ogg', 20, SCOM_TARGET_INQUISITOR, FALSE, FALSE, FALSE, TRUE)
+*/
 
 /obj/item/scomstone/speakerinq/MiddleClick(mob/user)
 	user.changeNext_move(CLICK_CD_INTENTCAP)
@@ -673,8 +677,9 @@
 	scom.mute(user)
 	update_icon()
 
-/obj/item/scomstone/speakerinq/attack_right(mob/user)
+	/*	/obj/item/scomstone/speakerinq/attack_right(mob/user)
 	return
+	*/
 
 /obj/item/listeningdevice
 	name = "listener"
@@ -713,9 +718,12 @@
 	layer = PROJECTILE_HIT_THRESHHOLD_LAYER
 	var/datum/scommodule/scom = new/datum/scommodule()
 
+/*
 /obj/structure/listeningdeviceactive/Initialize()
 	. = ..()
 	scom.setup(src, TRUE, TRUE, FALSE, FALSE, DEFAULT_GARRISON_COLOR, 'sound/vo/mobs/rat/rat_life.ogg', 100, SCOM_TARGET_INQUISITOR, FALSE, FALSE, FALSE, FALSE)
+	become_hearing_sensitive() // idk why it can't hear
+	*/
 
 /obj/structure/listeningdeviceactive/attack_right(mob/user)
 	to_chat(user, span_info("I begin dismounting the listen-stone..."))
