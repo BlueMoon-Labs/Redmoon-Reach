@@ -1,6 +1,6 @@
 /obj/item/organ/ears
 	name = "ears"
-	icon = 'icons/roguetown/items/surgery.dmi'
+	// icon = 'icons/roguetown/items/surgery.dmi' не знаю зачем указывать ссылку на файл в которм... НЕТ УШЕЙ
 	icon_state = "ear"
 	desc = ""
 	zone = BODY_ZONE_PRECISE_EARS
