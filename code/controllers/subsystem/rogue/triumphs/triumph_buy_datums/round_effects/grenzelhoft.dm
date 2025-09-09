@@ -1,6 +1,6 @@
 /datum/triumph_buy/grenzelhoft_maximum
 	triumph_buy_id = "Grenzelhoftmaxx"
-	desc = "Everyone is a human!"
+	desc = "Все становятся людьми!"
 	triumph_cost = 250
 	category = TRIUMPH_CAT_ROUND_EFX
 	pre_round_only = TRUE
@@ -28,6 +28,12 @@
 	if(is_species(H, /datum/species/goblin))
 		return
 	if(is_species(H, /datum/species/halforc))
+		return
+	if(is_species(H, /datum/species/kobold))
+		return
+	if(is_species(H, /datum/species/dwarf/mountain))
+		return
+	if(is_species(H, /datum/species/aasimar))
 		return
 	if(is_species(H, /datum/species/human/northern))
 		return
