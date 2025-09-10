@@ -1,4 +1,4 @@
-/*#define ROUNDWAITER "1325992382021501050"
+#define ROUNDWAITER "1325992382021501050"
 #define FUNNY_VIDEOS_FILE_NAME "config/discord_videos.json"
 
 /proc/init_discord_videos()
@@ -134,11 +134,30 @@
 		send2chat(random_message, "status")
 
 /world/proc/SendTGSRoundEnd()
-	var/count_of_joined_characters = SSround_end_statistics.males + SSround_end_statistics.females + SSround_end_statistics.males_with_vagina + SSround_end_statistics.females_with_penis
-	var/percent_of_males = PERCENT(SSround_end_statistics.males/count_of_joined_characters)
-	var/percent_of_males_with_vagina = PERCENT(SSround_end_statistics.males_with_vagina/count_of_joined_characters)
-	var/percent_of_females = PERCENT(SSround_end_statistics.females/count_of_joined_characters)
-	var/percent_of_females_with_penis = PERCENT(SSround_end_statistics.females_with_penis/count_of_joined_characters)
+	var/max_influence = -INFINITY
+	var/max_chosen = 0
+	var/datum/storyteller/most_influential
+	var/datum/storyteller/most_frequent
+
+	for(var/storyteller_name in SSgamemode.storytellers)
+		var/datum/storyteller/initialized_storyteller = SSgamemode.storytellers[storyteller_name]
+		if(!initialized_storyteller)
+			continue
+
+		var/influence = SSgamemode.calculate_storyteller_influence(initialized_storyteller.type)
+		if(influence > max_influence)
+			max_influence = influence
+			most_influential = initialized_storyteller
+
+		if(initialized_storyteller.times_chosen > max_chosen)
+			max_chosen = initialized_storyteller.times_chosen
+			most_frequent = initialized_storyteller
+
+	var/total_population = GLOB.scarlet_round_stats[STATS_TOTAL_POPULATION]
+	var/percent_of_males = total_population ? PERCENT(GLOB.scarlet_round_stats[STATS_MALE_POPULATION] / total_population) : 0
+	var/percent_of_females = total_population ? PERCENT(GLOB.scarlet_round_stats[STATS_FEMALE_POPULATION] / total_population) : 0
+	var/percent_of_other = total_population ? PERCENT(GLOB.scarlet_round_stats[STATS_OTHER_GENDER] / total_population) : 0
+
 	var/datum/tgs_message_content/message = new ("...вот и сказочке конец.")
 	var/datum/tgs_chat_embed/structure/embed = new()
 	message.embed = embed
@@ -146,50 +165,101 @@
 	embed.title = "Партия длилась [gameTimestamp("hh:mm:ss", world.time - SSticker.round_start_time)]."
 	embed.description = SSticker.get_end_reason()
 	embed.colour = "#f19a37"
-	// var/datum/tgs_chat_embed/field/deaths = new ("💀 Смертей: ", "[SSticker.deaths]")
+
+	var/datum/tgs_chat_embed/field/deaths = new ("💀 Смертей: ", "[GLOB.scarlet_round_stats[STATS_DEATHS]]")
 	var/datum/tgs_chat_embed/field/players = new (":ghost: Заблудшие души: ", "[GLOB.player_list.len]")
-	// var/datum/tgs_chat_embed/field/bloodspilled = new ("🩸 Крови пролито: ", "[round(SSticker.blood_lost / 100, 1)]L")
-	// var/datum/tgs_chat_embed/field/triumphgained = new ("🏆 Триумфов получено: ", "[SSticker.tri_gained]")
-	// var/datum/tgs_chat_embed/field/triumphslost = new (":woman_detective: Триумфов украдено: ","[SSticker.tri_lost*-1]")
-	// var/datum/tgs_chat_embed/field/pleasures = new ("💦 Наслаждений: ", "[SSticker.cums]")
+	var/datum/tgs_chat_embed/field/bloodspilled = new ("🩸 Крови пролито: ", "[round(GLOB.scarlet_round_stats[STATS_BLOOD_SPILT] / 100, 1)]L")
+	var/datum/tgs_chat_embed/field/triumphgained = new ("🏆 Триумфов получено: ", "[GLOB.scarlet_round_stats[STATS_TRIUMPHS_AWARDED]]")
+	var/datum/tgs_chat_embed/field/triumphslost = new (":woman_detective: Триумфов украдено: ","[GLOB.scarlet_round_stats[STATS_TRIUMPHS_STOLEN] * -1]")
+	var/datum/tgs_chat_embed/field/pleasures = new ("💦 Наслаждений: ", "[GLOB.scarlet_round_stats[STATS_PLEASURES]]")
 	var/datum/tgs_chat_embed/field/confessors = new (":orthodox_cross: Исповедники: ", "[GLOB.confessors.len]")
-	var/datum/tgs_chat_embed/field/men = new (":man_beard: Мужчины: ", "[SSround_end_statistics.males] ([percent_of_males]%)")
-	var/datum/tgs_chat_embed/field/women = new (":woman: Женщины: ", "[SSround_end_statistics.females] ([percent_of_females]%)")
-	var/datum/tgs_chat_embed/field/cuntboys = new (":man: Кантбои: ", "[SSround_end_statistics.males_with_vagina] ([percent_of_males_with_vagina]%)")
-	var/datum/tgs_chat_embed/field/futas = new (":woman_beard: Фута: ", "[SSround_end_statistics.females_with_penis] ([percent_of_females_with_penis]%)")
-	var/datum/tgs_chat_embed/field/species = new (":people_hugging: Расы: ", "\
-	Аасимары: [SSround_end_statistics.species_aasimar] | \
-	Аксиане: [SSround_end_statistics.species_axian] | \
-	Верминволки: [SSround_end_statistics.species_anthromorphsmall] | \
-	Вульпканин: [SSround_end_statistics.species_vulpkanin] | \
-	Гоблины: [SSround_end_statistics.species_goblinp] | \
-	Дварфы: [SSround_end_statistics.species_dwarf] | \
-	Дикари: [SSround_end_statistics.species_anthromorph] | \
-	Дракониды: [SSround_end_statistics.species_dracon] | \
-	Дроу: [SSround_end_statistics.species_drow] | \
-	Кобольды: [SSround_end_statistics.species_kobold] | \
-	Краукали: [SSround_end_statistics.species_kraukalee] | \
-	Люпины: [SSround_end_statistics.species_lupian] | \
-	Люди: [SSround_end_statistics.species_humen] | \
-	Моли: [SSround_end_statistics.species_moth] | \
-	Полукровки: [SSround_end_statistics.species_demihuman] | \
-	Полуорки: [SSround_end_statistics.species_halforc] | \
-	Полуэльфы: [SSround_end_statistics.species_halfelf] | \
-	Сиссеане: [SSround_end_statistics.species_lizardfolk] | \
-	Табакси: [SSround_end_statistics.species_tabaxi] | \
-	Тифлинги: [SSround_end_statistics.species_tiefling] | \
-	Феи: [SSround_end_statistics.species_seelie] | \
-	Эльфы: [SSround_end_statistics.species_elf] | \
-	")
+	var/datum/tgs_chat_embed/field/men = new (":man_beard: Мужчины: ", "[GLOB.scarlet_round_stats[STATS_MALE_POPULATION]] ([percent_of_males]%)")
+	var/datum/tgs_chat_embed/field/women = new (":woman: Женщины: ", "[GLOB.scarlet_round_stats[STATS_FEMALE_POPULATION]] ([percent_of_females]%)")
+	var/datum/tgs_chat_embed/field/other_gender = new (":transgender_flag: Другие: ", "[GLOB.scarlet_round_stats[STATS_OTHER_GENDER]] ([percent_of_other]%)")
+
+	var/gods_text = ""
+	if(max_influence <= 0 && max_chosen <= 0)
+		gods_text = "Боги не проявляли влияния"
+	else if(most_influential == most_frequent && max_influence > 0)
+		gods_text = "Доминировал: [most_influential.name]"
+	else
+		if(max_influence > 0)
+			gods_text += "Влиятельный: [most_influential.name] "
+		if(max_chosen > 0)
+			gods_text += "Частый: [most_frequent.name]"
+	var/datum/tgs_chat_embed/field/gods = new (":gem: Боги: ", gods_text)
+
+	var/datum/tgs_chat_embed/field/revivals = new ("✨ Воскрешений: ", "[GLOB.scarlet_round_stats[STATS_ASTRATA_REVIVALS] + GLOB.scarlet_round_stats[STATS_LUX_REVIVALS]]")
+	var/datum/tgs_chat_embed/field/prayers = new ("🙏 Молитв: ", "[GLOB.scarlet_round_stats[STATS_PRAYERS_MADE]]")
+	var/datum/tgs_chat_embed/field/drowned = new ("🌊 Утонуло: ", "[GLOB.scarlet_round_stats[STATS_PEOPLE_DROWNED]]")
+	var/datum/tgs_chat_embed/field/stolen = new ("👜 Украдено: ", "[GLOB.scarlet_round_stats[STATS_ITEMS_PICKPOCKETED]]")
+	var/datum/tgs_chat_embed/field/alcohol = new ("🍷 Алкоголя выпито: ", "[GLOB.scarlet_round_stats[STATS_ALCOHOL_CONSUMED]]")
+	var/datum/tgs_chat_embed/field/drugs = new ("💊 Наркотиков: ", "[GLOB.scarlet_round_stats[STATS_DRUGS_SNORTED]]")
+	var/datum/tgs_chat_embed/field/fish = new ("🐟 Рыбы поймано: ", "[GLOB.scarlet_round_stats[STATS_FISH_CAUGHT]]")
+	var/datum/tgs_chat_embed/field/trees = new ("🌳 Деревьев срублено: ", "[GLOB.scarlet_round_stats[STATS_TREES_CUT]]")
+	var/datum/tgs_chat_embed/field/plants = new ("🌿 Растений собрано: ", "[GLOB.scarlet_round_stats[STATS_PLANTS_HARVESTED]]")
+
+	var/datum/tgs_chat_embed/field/races1 = new (":people_hugging: Расы (основные): ", "\
+	Люди: [GLOB.scarlet_round_stats[STATS_ALIVE_NORTHERN_HUMANS]] | \
+	Дварфы: [GLOB.scarlet_round_stats[STATS_ALIVE_DWARVES]] | \
+	Эльфы: [GLOB.scarlet_round_stats[STATS_ALIVE_WOOD_ELVES] + GLOB.scarlet_round_stats[STATS_ALIVE_DARK_ELVES]] | \
+	Полуэльфы: [GLOB.scarlet_round_stats[STATS_ALIVE_HALF_ELVES]] | \
+	Тифлинги: [GLOB.scarlet_round_stats[STATS_ALIVE_TIEFLINGS]]")
+
+	var/datum/tgs_chat_embed/field/races2 = new (":people_hugging: Расы (гибриды): ", "\
+	Полуорки: [GLOB.scarlet_round_stats[STATS_ALIVE_HALF_ORCS]] | \
+	Гоблины: [GLOB.scarlet_round_stats[STATS_ALIVE_GOBLINS]] | \
+	Кобольды: [GLOB.scarlet_round_stats[STATS_ALIVE_KOBOLDS]] | \
+	Ящеры: [GLOB.scarlet_round_stats[STATS_ALIVE_LIZARDS]] | \
+	Аасимары: [GLOB.scarlet_round_stats[STATS_ALIVE_AASIMAR]]")
+
+	var/datum/tgs_chat_embed/field/races3 = new (":people_hugging: Расы (экзотические): ", "\
+	Полукин: [GLOB.scarlet_round_stats[STATS_ALIVE_HALFKIN]] | \
+	Дикари: [GLOB.scarlet_round_stats[STATS_ALIVE_WILDKIN]] | \
+	Големы: [GLOB.scarlet_round_stats[STATS_ALIVE_GOLEMS]] | \
+	Верминфолк: [GLOB.scarlet_round_stats[STATS_ALIVE_VERMINFOLK]] | \
+	Драконы: [GLOB.scarlet_round_stats[STATS_ALIVE_DRACON]]")
+
+	var/datum/tgs_chat_embed/field/races4 = new (":people_hugging: Расы (звериные): ", "\
+	Аксиане: [GLOB.scarlet_round_stats[STATS_ALIVE_AXIAN]] | \
+	Табакси: [GLOB.scarlet_round_stats[STATS_ALIVE_TABAXI]] | \
+	Вульпы: [GLOB.scarlet_round_stats[STATS_ALIVE_VULPS]] | \
+	Люпины: [GLOB.scarlet_round_stats[STATS_ALIVE_LUPIANS]] | \
+	Моли: [GLOB.scarlet_round_stats[STATS_ALIVE_MOTHS]] | \
+	Ламии: [GLOB.scarlet_round_stats[STATS_ALIVE_LAMIA]]")
+
 	var/round_occupations = ""
 	for(var/datum/job/roguetown/target_job in SSjob.occupations)
 		if(target_job.current_positions > 0)
 			round_occupations += "[target_job.title] - [target_job.current_positions] | "
 	var/datum/tgs_chat_embed/field/jobs = new (":briefcase: Уделы: ", round_occupations)
 
-	embed.fields = list(deaths, bloodspilled, triumphgained, triumphslost, pleasures, confessors, players, men, women, cuntboys, futas, species, jobs)
+	embed.fields = list(
+		deaths,
+		bloodspilled,
+		triumphgained,
+		triumphslost,
+		pleasures,
+		confessors,
+		players,
+		men,
+		women,
+		other_gender,
+		gods,
+		revivals,
+		prayers,
+		drowned,
+		stolen,
+		alcohol,
+		drugs,
+		fish,
+		trees,
+		plants,
+		races1,
+		races2,
+		races3,
+		races4,
+		jobs
+	)
 
 	send2chat(message, "status")
-
-#undef ROUNDWAITER
-*/

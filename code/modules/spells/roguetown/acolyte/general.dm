@@ -83,12 +83,11 @@
 			if(/datum/patron/divine/dendor)
 				message_out = span_info("A rush of primal energy spirals about [target]!")
 				message_self = span_notice("I'm infused with primal energies!")
-				var/list/natural_stuff = list(/obj/structure/flora/roguegrass, /obj/structure/flora/roguetree, /obj/structure/flora/rogueshroom, /obj/structure/soil, /obj/structure/flora/newtree, /obj/structure/flora/tree, /obj/structure/glowshroom)
 				situational_bonus = 0
 				// the more natural stuff around US, the more we heal
 				for (var/obj/O in oview(5, user))
-					if (O in natural_stuff)
-						situational_bonus = min(situational_bonus + 0.1, 2)
+					if (istype(O, /obj/structure/flora) || istype(O, /obj/structure/soil) || istype(O, /obj/structure/glowshroom) || istype(O, /obj/structure/vine))
+						situational_bonus = min(situational_bonus + 0.2, 4)
 				for (var/obj/structure/flora/roguetree/wise/O in oview(5, user))
 					situational_bonus += 1.5
 				// Healing before the oaken avatar of Dendor in the Druid Grove (exceptionally rare otherwise) supercharges their healing

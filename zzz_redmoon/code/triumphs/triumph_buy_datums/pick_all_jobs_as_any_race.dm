@@ -1,8 +1,8 @@
 /datum/triumph_buy/race_all_jobs
 	triumph_buy_id = "race_all"
-	desc = "Every species can be in any job and class!"
-	triumph_cost = 15
-	category = TRIUMPH_CAT_CHARACTER
+	desc = "Снять расовые ограничения для вас с роли!"
+	triumph_cost = 10
+	category = TRIUMPH_CAT_ROUND_EFX
 
 /datum/triumph_buy/race_all_jobs/on_buy()
 	if(usr && usr.client)
