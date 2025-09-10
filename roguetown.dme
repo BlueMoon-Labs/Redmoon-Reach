@@ -2577,7 +2577,6 @@
 #include "zzz_redmoon\modules\maids\code\crafting.dm"
 #include "zzz_redmoon\modules\maids\code\jobs\butler.dm"
 #include "zzz_redmoon\modules\maids\code\jobs\servant.dm"
-#include "zzz_redmoon\modules\stats_reports_with_gender_list\stats_reports_with_gender_lists.dm"
 #include "modular_scarletreach\code\modules\mob\living\carbon\human\voicepacks\female\tabaxi.dm"
 #include "modular_scarletreach\code\modules\mob\living\carbon\human\voicepacks\male\tabaxi.dm"
 #include "modular_stonehedge\code\modules\clothing\rogueclothes\hats.dm"
