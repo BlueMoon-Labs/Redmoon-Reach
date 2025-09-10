@@ -1,7 +1,7 @@
 /datum/status_effect/debuff/banditbuffdown
 	id = "banditbuffdown"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/banditbuffdown
-	effectedstats = list("constitution" = -2,"endurance" = -2, "speed" = -2, "perception" = -4)
+	effectedstats = list("constitution" = -2, "endurance" = -2, "speed" = -2, "perception" = -4)
 
 /datum/status_effect/debuff/banditbuffdown/process()
 	.=..()
