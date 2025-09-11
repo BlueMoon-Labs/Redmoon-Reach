@@ -181,10 +181,10 @@
 	if(max_influence <= 0 && max_chosen <= 0)
 		gods_text = "Боги не проявляли влияния"
 	else if(most_influential == most_frequent && max_influence > 0)
-		gods_text = "Доминировал: [most_influential.name]"
+		gods_text = "Наиболее Доминирующий Покровитель: [most_influential.name]"
 	else
 		if(max_influence > 0)
-			gods_text += "Влиятельный: [most_influential.name] "
+			gods_text += "Наиболее Влиятельный Покровитель: [most_influential.name] "
 		if(max_chosen > 0)
 			gods_text += "Частый: [most_frequent.name]"
 	var/datum/tgs_chat_embed/field/gods = new (":gem: Боги: ", gods_text)
@@ -192,9 +192,9 @@
 	var/datum/tgs_chat_embed/field/revivals = new ("✨ Воскрешений: ", "[GLOB.scarlet_round_stats[STATS_ASTRATA_REVIVALS] + GLOB.scarlet_round_stats[STATS_LUX_REVIVALS]]")
 	var/datum/tgs_chat_embed/field/prayers = new ("🙏 Молитв: ", "[GLOB.scarlet_round_stats[STATS_PRAYERS_MADE]]")
 	var/datum/tgs_chat_embed/field/drowned = new ("🌊 Утонуло: ", "[GLOB.scarlet_round_stats[STATS_PEOPLE_DROWNED]]")
-	var/datum/tgs_chat_embed/field/stolen = new ("👜 Украдено: ", "[GLOB.scarlet_round_stats[STATS_ITEMS_PICKPOCKETED]]")
+	var/datum/tgs_chat_embed/field/stolen = new ("👜 Карманного Воровства: ", "[GLOB.scarlet_round_stats[STATS_ITEMS_PICKPOCKETED]]")
 	var/datum/tgs_chat_embed/field/alcohol = new ("🍷 Алкоголя выпито: ", "[GLOB.scarlet_round_stats[STATS_ALCOHOL_CONSUMED]]")
-	var/datum/tgs_chat_embed/field/drugs = new ("💊 Наркотиков: ", "[GLOB.scarlet_round_stats[STATS_DRUGS_SNORTED]]")
+	var/datum/tgs_chat_embed/field/drugs = new ("💊 Наркотиков использовано: ", "[GLOB.scarlet_round_stats[STATS_DRUGS_SNORTED]]")
 	var/datum/tgs_chat_embed/field/fish = new ("🐟 Рыбы поймано: ", "[GLOB.scarlet_round_stats[STATS_FISH_CAUGHT]]")
 	var/datum/tgs_chat_embed/field/trees = new ("🌳 Деревьев срублено: ", "[GLOB.scarlet_round_stats[STATS_TREES_CUT]]")
 	var/datum/tgs_chat_embed/field/plants = new ("🌿 Растений собрано: ", "[GLOB.scarlet_round_stats[STATS_PLANTS_HARVESTED]]")
@@ -214,10 +214,10 @@
 	Аасимары: [GLOB.scarlet_round_stats[STATS_ALIVE_AASIMAR]]")
 
 	var/datum/tgs_chat_embed/field/races3 = new (":people_hugging: Расы (экзотические): ", "\
-	Полукин: [GLOB.scarlet_round_stats[STATS_ALIVE_HALFKIN]] | \
+	Полукины: [GLOB.scarlet_round_stats[STATS_ALIVE_HALFKIN]] | \
 	Дикари: [GLOB.scarlet_round_stats[STATS_ALIVE_WILDKIN]] | \
 	Големы: [GLOB.scarlet_round_stats[STATS_ALIVE_GOLEMS]] | \
-	Верминфолк: [GLOB.scarlet_round_stats[STATS_ALIVE_VERMINFOLK]] | \
+	Верминфолки: [GLOB.scarlet_round_stats[STATS_ALIVE_VERMINFOLK]] | \
 	Драконы: [GLOB.scarlet_round_stats[STATS_ALIVE_DRACON]]")
 
 	var/datum/tgs_chat_embed/field/races4 = new (":people_hugging: Расы (звериные): ", "\
