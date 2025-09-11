@@ -1,6 +1,6 @@
 /datum/triumph_buy/female_power
 	triumph_buy_id = "female_power"
-	desc = "Females can be in any job and class!"
+	desc = "Женщины снимают все классовые ограничения!"
 	triumph_cost = 10
 	category = TRIUMPH_CAT_ROUND_EFX
 	pre_round_only = TRUE
