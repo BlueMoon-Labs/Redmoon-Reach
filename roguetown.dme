@@ -2490,6 +2490,7 @@
 #include "zzz_redmoon\code\game\area\roguetownareas.dm"
 #include "zzz_redmoon\code\mob\living.dm"
 #include "zzz_redmoon\code\modules\client\client_procs.dm"
+#include "zzz_redmoon\code\modules\crafting\alchemy.dm"
 #include "zzz_redmoon\code\modules\events\bandits.dm"
 #include "zzz_redmoon\code\modules\tgs\roundspoke.dm"
 #include "zzz_redmoon\code\triumphs\triumph_buy_datums.dm"
