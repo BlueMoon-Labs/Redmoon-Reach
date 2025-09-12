@@ -279,7 +279,7 @@ GLOBAL_LIST_EMPTY(heretical_players)
 			to_chat(src, span_warning("I need to do this from the chapel."))
 			return FALSE
 		devotion.update_devotion(-750)
-		priority_announce("[inputty]", title = "Высший Жрец Вещает", sound = 'sound/misc/bell.ogg', sender = src)
+		priority_announce("[inputty]", title = "Верховный Жрец Вещает", sound = 'sound/misc/bell.ogg', sender = src)
 
 /mob/living/carbon/human/proc/churcheapostasy(var/mob/living/carbon/human/H in GLOB.player_list)
 	set name = "Apostasy"
