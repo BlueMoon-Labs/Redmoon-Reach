@@ -78,6 +78,7 @@
 		/datum/customizer/organ/penis/anthro,
 		/datum/customizer/organ/breasts/human,
 		/datum/customizer/organ/vagina/human,
+		/datum/customizer/organ/butt/human, // REDMOON
 		)
 	languages = list(
 		/datum/language/common,

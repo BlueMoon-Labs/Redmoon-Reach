@@ -79,6 +79,7 @@
 		/datum/customizer/organ/penis/lamia, // only tapered or hemi tapered or tentacle
 		/datum/customizer/organ/breasts/human,
 		/datum/customizer/organ/vagina/anthro,
+		/datum/customizer/organ/butt/animal, // REDMOON
 		)
 	body_marking_sets = list(
 		/datum/body_marking_set/none,

@@ -80,6 +80,7 @@
 		/datum/customizer/organ/breasts/human,
 		/datum/customizer/organ/vagina/human_anthro,
 		/datum/customizer/organ/testicles/anthro,
+		/datum/customizer/organ/butt/human, // REDMOON
 		)
 	body_marking_sets = list(
 		/datum/body_marking_set/none,

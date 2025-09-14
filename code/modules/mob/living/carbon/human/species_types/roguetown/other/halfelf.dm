@@ -70,6 +70,7 @@
 		/datum/customizer/organ/penis/anthro,
 		/datum/customizer/organ/breasts/human,
 		/datum/customizer/organ/vagina/human_anthro,
+		/datum/customizer/organ/butt/human, // REDMOON
 		/datum/customizer/organ/ears/elf,
 		)
 	body_marking_sets = list(

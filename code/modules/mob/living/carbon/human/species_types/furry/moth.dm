@@ -72,6 +72,7 @@
 		/datum/customizer/organ/penis/anthro,
 		/datum/customizer/organ/breasts/animal,
 		/datum/customizer/organ/vagina/animal,
+		/datum/customizer/organ/butt/animal, // REDMOON
 		)
 	body_marking_sets = list(
 		/datum/body_marking_set/moth/reddish,
