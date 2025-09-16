@@ -184,9 +184,9 @@
 		gods_text = "Наиболее Доминирующий Покровитель: [most_influential.name]"
 	else
 		if(max_influence > 0)
-			gods_text += "Наиболее Влиятельный Покровитель: [most_influential.name] "
+			gods_text += "Покровитель Деца: [most_influential.name] получил [max_influence] очков влияния.<br>"
 		if(max_chosen > 0)
-			gods_text += "Частый: [most_frequent.name]"
+			gods_text += "Покровитель Деца: [most_frequent.name] имел [max_chosen] верослужителей."
 	var/datum/tgs_chat_embed/field/gods = new (":gem: Боги: ", gods_text)
 
 	var/datum/tgs_chat_embed/field/revivals = new ("✨ Воскрешений: ", "[GLOB.scarlet_round_stats[STATS_ASTRATA_REVIVALS] + GLOB.scarlet_round_stats[STATS_LUX_REVIVALS]]")
