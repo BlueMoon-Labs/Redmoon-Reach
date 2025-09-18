@@ -11,4 +11,4 @@
 
 /atom/movable/screen/alert/status_effect/debuff/banditbuffdown
 	name = "I don't belong here"
-	desc = "Отвратительное место. Мой Покровитель мной недоволен."
+	desc = "Алый Предел находится под защитой Десяти! Жжётся!"
