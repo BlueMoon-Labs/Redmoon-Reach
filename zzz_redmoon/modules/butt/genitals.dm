@@ -6,7 +6,7 @@
 	icon_state = "butt"
 	dropshrink = 0.5
 	visible_organ = TRUE
-	zone = BODY_ZONE_PRECISE_GROIN
+	zone = BODY_ZONE_PRECISE_STOMACH
 	slot = ORGAN_SLOT_BUTT
 	organ_dna_type = /datum/organ_dna/butt
 	accessory_type = /datum/sprite_accessory/butt/pair
@@ -35,8 +35,8 @@
 /datum/customizer/organ/butt
 	abstract_type = /datum/customizer/organ/butt
 	name = "Butt"
-	allows_disabling = FALSE
-	default_disabled = FALSE
+	allows_disabling = TRUE
+	default_disabled = TRUE
 
 /datum/customizer_choice/organ/butt
 	abstract_type = /datum/customizer_choice/organ/butt
@@ -93,7 +93,7 @@
 /datum/sprite_accessory/butt
 	icon = 'zzz_redmoon/icons/butt.dmi'
 	color_key_name = "Butt"
-	relevant_layers = list(BODY_ADJ_LAYER)
+	relevant_layers = list(FRONT_MUTATIONS_LAYER)
 
 /datum/sprite_accessory/butt/adjust_appearance_list(list/appearance_list, obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
 	if(!isdwarf(owner) && !isgoblinp(owner) && !iskobold(owner) && !isvermin(owner))
