@@ -93,7 +93,7 @@
 /datum/sprite_accessory/butt
 	icon = 'zzz_redmoon/icons/butt.dmi'
 	color_key_name = "Butt"
-	relevant_layers = list(FRONT_MUTATIONS_LAYER)
+	relevant_layers = list(BODY_ADJ_LAYER)
 
 /datum/sprite_accessory/butt/adjust_appearance_list(list/appearance_list, obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
 	if(!isdwarf(owner) && !isgoblinp(owner) && !iskobold(owner) && !isvermin(owner))
