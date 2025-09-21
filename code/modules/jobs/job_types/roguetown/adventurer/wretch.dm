@@ -95,14 +95,14 @@
 		var/descriptor_voice = build_coalesce_description_nofluff(d_list, H, list(MOB_DESCRIPTOR_SLOT_VOICE), "%DESC1%")
 		var/bounty_poster = "The Justiciary of Scarlet Reach"
 		var/bounty_severity = input(H, "How severe are your crimes?", "Bounty Amount") as anything in list("Misdeed", "Harm towards lyfe", "Horrific atrocities")
-		var/bounty_total = rand(100, 400) // Just in case
+		var/bounty_total = rand(40, 500) // Just in case
 		switch(bounty_severity)
 			if("Misdeed")
-				bounty_total = rand(100, 200)
+				bounty_total = rand(40, 150)
 			if("Harm towards lyfe")
 				bounty_total = rand(200, 300)
 			if("Horrific atrocities")
-				bounty_total = rand(300, 400) // Let's not make it TOO profitable
+				bounty_total = rand(350, 500) // Changing this shit for Redmoon realities
 		var/my_crime = input(H, "What is your crime?", "Crime") as text|null
 		if (!my_crime)
 			my_crime = "crimes against the Crown"
