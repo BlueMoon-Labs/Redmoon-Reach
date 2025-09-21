@@ -370,3 +370,8 @@
 	name = "Heresiarch"
 	desc = "The 'Holy' See has their blood-stained grounds, and so do we. Underneath their noses, we pray to the true gods - I know the location of the local heretic conclave. Secrecy is paramount. If found out, I will surely be killed."
 	added_traits = list(TRAIT_HERESIARCH)
+
+/datum/virtue/utility/horseman
+	name = "Horseman"
+	desc = "Be it intense trainings with nobles or hunt in the woods, you know how to deal with mounts."
+	added_skills = list(list(/datum/skill/other/riding, 1, 3))
