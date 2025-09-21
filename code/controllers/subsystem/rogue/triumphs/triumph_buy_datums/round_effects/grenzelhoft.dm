@@ -65,22 +65,20 @@
 			set_eye_color(H, "#ff0000", "#ff0000")
 	eyes.update_accessory_colors()
 	var/datum/bodypart_feature/hair/facial/hair = H.get_bodypart_feature_of_slot(BODYPART_FEATURE_HAIR)
-	var/num2 = rand(0, 6)
+	var/num2 = rand(0, 5)
 	switch(num2)
 		if(0)
-			hair.accessory_type = /datum/sprite_accessory/hair/head/bald
+			hair.set_accessory_type(/datum/sprite_accessory/hair/head/bob, "#262222", H)
 		if(1)
-			hair.accessory_type = /datum/sprite_accessory/hair/head/bob
+			hair.set_accessory_type(/datum/sprite_accessory/hair/head/boddicker, "#262222", H)
 		if(2)
-			hair.accessory_type = /datum/sprite_accessory/hair/head/boddicker
+			hair.set_accessory_type(/datum/sprite_accessory/hair/head/braided, "#262222", H)
 		if(3)
-			hair.accessory_type = /datum/sprite_accessory/hair/head/braided
+			hair.set_accessory_type(/datum/sprite_accessory/hair/head/lowbun, "#262222", H)
 		if(4)
-			hair.accessory_type = /datum/sprite_accessory/hair/head/lowbun
-		if(5)
-			hair.accessory_type = /datum/sprite_accessory/hair/head/largebun
+			hair.set_accessory_type(/datum/sprite_accessory/hair/head/largebun, "#262222", H)
 		else
-			hair.accessory_type = /datum/sprite_accessory/hair/head/combover
+			hair.set_accessory_type(/datum/sprite_accessory/hair/head/combover, "#262222", H)
 	H.update_body()
 	H.update_hair()
 	H.update_body_parts()
