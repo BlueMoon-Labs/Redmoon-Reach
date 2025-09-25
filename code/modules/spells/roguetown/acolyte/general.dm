@@ -91,7 +91,7 @@
 				// the more natural stuff around US, the more we heal
 				for (var/obj/O in oview(5, user))
 					if (istype(O, /obj/structure/flora) || istype(O, /obj/structure/soil) || istype(O, /obj/structure/glowshroom) || istype(O, /obj/structure/vine))
-						situational_bonus = min(situational_bonus + 0.2, 4)
+						situational_bonus = min(situational_bonus + 0.2, 5)
 				for (var/obj/structure/flora/roguetree/wise/O in oview(5, user))
 					situational_bonus += 1.5
 				// Healing before the oaken avatar of Dendor in the Druid Grove (exceptionally rare otherwise) supercharges their healing
@@ -110,7 +110,7 @@
 				situational_bonus = 0
 				// the bloodier the area around our target is, the more we heal
 				for (var/obj/effect/decal/cleanable/blood/O in oview(5, target))
-					situational_bonus = min(situational_bonus + 0.1, 2)
+					situational_bonus = min(situational_bonus + 0.1, 5)
 				conditional_buff = TRUE
 			if(/datum/patron/divine/necra)
 				message_out = span_info("A sense of quiet respite radiates from [target]!")
@@ -127,7 +127,7 @@
 				// half of the time, heal a little (or a lot) more - flip the coin
 				if (prob(50))
 					conditional_buff = TRUE
-					situational_bonus = rand(1, 2.5)
+					situational_bonus = rand(1, 5)
 			if(/datum/patron/divine/pestra)
 				message_out = span_info("An aura of clinical care encompasses [target]!")
 				message_self = span_notice("I'm sewn back together by sacred medicine!")
@@ -142,7 +142,7 @@
 				situational_bonus = 0
 				for (var/obj/O in oview(5, user))
 					if (O.type in firey_stuff)
-						situational_bonus = min(situational_bonus + 0.5, 2.5)
+						situational_bonus = min(situational_bonus + 0.5, 5)
 				if (situational_bonus > 0)
 					conditional_buff = TRUE
 			if(/datum/patron/divine/eora)
