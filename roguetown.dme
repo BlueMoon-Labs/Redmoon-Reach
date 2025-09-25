@@ -2501,6 +2501,7 @@
 #include "zzz_redmoon\code\modules\client\client_procs.dm"
 #include "zzz_redmoon\code\modules\crafting\alchemy.dm"
 #include "zzz_redmoon\code\modules\events\bandits.dm"
+#include "zzz_redmoon\code\modules\mob\species_types\lamia.dm"
 #include "zzz_redmoon\code\modules\tgs\roundspoke.dm"
 #include "zzz_redmoon\code\triumphs\triumph_buy_datums.dm"
 #include "zzz_redmoon\code\triumphs\triumph_buy_datums\antags.dm"
