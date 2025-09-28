@@ -128,7 +128,7 @@
 				situational_bonus = rand(1, 6)
 				switch(situational_bonus)
 					if(1)
-						user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll1", 1 SECONDS, MUTATIONS_LAYER, soundin = 'sound/misc/psydong.ogg', y_offset = 32)
+						user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll1", 3 SECONDS, MUTATIONS_LAYER, soundin = 'sound/misc/psydong.ogg', y_offset = 32)
 						user.psydo_nyte()
 						var/turf/T = get_step(get_step(user, NORTH), NORTH)
 						T.Beam(user, icon_state="lightning[rand(1,12)]", time = 5)
