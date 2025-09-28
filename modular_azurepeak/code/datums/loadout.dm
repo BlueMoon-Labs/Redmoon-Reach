@@ -460,6 +460,10 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Exotic Silk Belt"
 	path = /obj/item/storage/belt/rogue/leather/exoticsilkbelt
 
+/datum/loadout_item/clothsash
+	name = "Cloth Sash"
+	path = /obj/item/storage/belt/rogue/leather/sash
+
 /datum/loadout_item/ragmask
 	name = "Rag Mask"
 	path = /obj/item/clothing/mask/rogue/ragmask
@@ -599,37 +603,37 @@ GLOBAL_LIST_EMPTY(loadout_items)
 /datum/loadout_item/donator_plex
 	name = "Donator Kit - Rapier di Aliseo"
 	path = /obj/item/enchantingkit/plexiant
-	ckeywhitelist = list("plexiant")
+	ckeywhitelist = list("plexiant", "ingvarr3313", "ksys", "noterravija", "zeroinside", "king1artur1", "porokuru", "deltarayx", "loki_fox", "uchigatana", "dragoncora", "ordinarylife", "junejuly", "skilets", "arcanistis")
 
 /datum/loadout_item/donator_sru
 	name = "Donator Kit - Emerald Dress"
 	path = /obj/item/enchantingkit/srusu
-	ckeywhitelist = list("cheekycrenando")
+	ckeywhitelist = list("cheekycrenando", "ingvarr3313", "ksys", "noterravija", "zeroinside", "king1artur1", "porokuru", "deltarayx", "loki_fox", "uchigatana", "dragoncora", "ordinarylife", "junejuly", "skilets", "arcanistis")
 
 /datum/loadout_item/donator_strudel
 	name = "Donator Kit - Grenzelhoftian Mage Vest"
 	path = /obj/item/enchantingkit/strudle
-	ckeywhitelist = list("toasterstrudes")
+	ckeywhitelist = list("toasterstrudes", "ingvarr3313", "ksys", "noterravija", "zeroinside", "king1artur1", "porokuru", "deltarayx", "loki_fox", "uchigatana", "dragoncora", "ordinarylife", "junejuly", "skilets", "arcanistis")
 
 /datum/loadout_item/donator_bat
 	name = "Donator Kit - Handcarved Harp"
 	path = /obj/item/enchantingkit/bat
-	ckeywhitelist = list("kitchifox")
+	ckeywhitelist = list("kitchifox", "ingvarr3313", "ksys", "noterravija", "zeroinside", "king1artur1", "porokuru", "deltarayx", "loki_fox", "uchigatana", "dragoncora", "ordinarylife", "junejuly", "skilets", "arcanistis")
 
 /datum/loadout_item/donator_mansa
 	name = "Donator Kit - Wortträger"
 	path = /obj/item/enchantingkit/ryebread
-	ckeywhitelist = list("pepperoniplayboy")	//Byond maybe doesn't like spaces. If a name has a space, do it as one continious name.
+	ckeywhitelist = list("pepperoniplayboy", "ingvarr3313", "ksys", "noterravija", "zeroinside", "king1artur1", "porokuru", "deltarayx", "loki_fox", "uchigatana", "dragoncora", "ordinarylife", "junejuly", "skilets", "arcanistis")
 
 /datum/loadout_item/donator_rebel
 	name = "Donator Kit - Gilded Sallet"
 	path = /obj/item/enchantingkit/rebel
-	ckeywhitelist = list("rebel0")
+	ckeywhitelist = list("rebel0", "ingvarr3313", "ksys", "noterravija", "zeroinside", "king1artur1", "porokuru", "deltarayx", "loki_fox", "uchigatana", "dragoncora", "ordinarylife", "junejuly", "skilets", "arcanistis")
 
 /datum/loadout_item/donator_zydras
 	name = "Donator Kit - Padded silky dress"
 	path = /obj/item/enchantingkit/zydras
-	ckeywhitelist = list("1ceres")
+	ckeywhitelist = list("1ceres", "ingvarr3313", "ksys", "noterravija", "zeroinside", "king1artur1", "porokuru", "deltarayx", "loki_fox", "uchigatana", "dragoncora", "ordinarylife", "junejuly", "skilets", "arcanistis")
 
 /datum/loadout_item/leather_collar
 	name = "Leather Collar"

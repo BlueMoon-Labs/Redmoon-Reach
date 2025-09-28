@@ -91,7 +91,7 @@
 				// the more natural stuff around US, the more we heal
 				for (var/obj/O in oview(5, user))
 					if (istype(O, /obj/structure/flora) || istype(O, /obj/structure/soil) || istype(O, /obj/structure/glowshroom) || istype(O, /obj/structure/vine))
-						situational_bonus = min(situational_bonus + 0.2, 4)
+						situational_bonus = min(situational_bonus + 0.2, 5)
 				for (var/obj/structure/flora/roguetree/wise/O in oview(5, user))
 					situational_bonus += 1.5
 				// Healing before the oaken avatar of Dendor in the Druid Grove (exceptionally rare otherwise) supercharges their healing
@@ -110,7 +110,7 @@
 				situational_bonus = 0
 				// the bloodier the area around our target is, the more we heal
 				for (var/obj/effect/decal/cleanable/blood/O in oview(5, target))
-					situational_bonus = min(situational_bonus + 0.1, 2)
+					situational_bonus = min(situational_bonus + 0.1, 5)
 				conditional_buff = TRUE
 			if(/datum/patron/divine/necra)
 				message_out = span_info("A sense of quiet respite radiates from [target]!")
@@ -124,10 +124,36 @@
 			if(/datum/patron/divine/xylix)
 				message_out = span_info("A fugue seems to manifest briefly across [target]!")
 				message_self = span_notice("My wounds vanish as if they had never been there! ")
-				// half of the time, heal a little (or a lot) more - flip the coin
-				if (prob(50))
-					conditional_buff = TRUE
-					situational_bonus = rand(1, 2.5)
+				conditional_buff = TRUE
+				situational_bonus = rand(1, 6)
+				switch(situational_bonus)
+					if(1)
+						user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll1", 3 SECONDS, MUTATIONS_LAYER, soundin = 'sound/misc/psydong.ogg', y_offset = 32)
+						user.psydo_nyte()
+						var/turf/T = get_step(get_step(user, NORTH), NORTH)
+						T.Beam(user, icon_state="lightning[rand(1,12)]", time = 5)
+						user.adjustFireLoss(150)
+						if(ishuman(user))
+							var/mob/living/carbon/human/H = user
+							H.electrocution_animation(40)
+						GLOB.scarlet_round_stats[STATS_PEOPLE_SMITTEN]++
+						to_chat(user, span_danger("Ксайликсу это очень не понравилось!"))
+					if(2)
+						user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll2", 3 SECONDS, MUTATIONS_LAYER, soundin = 'sound/magic/mockery.ogg', y_offset = 32)
+						user.psydo_nyte()
+						var/turf/target_tile = get_ranged_target_turf(user, pick(GLOB.alldirs), 12)
+						user.throw_at(target = target_tile, range = 12, speed = 2, thrower = user, spin = TRUE, force = 30)
+						user.Knockdown(1 SECONDS)
+						GLOB.scarlet_round_stats[STATS_PEOPLE_SMITTEN]++
+						to_chat(user, span_danger("Ксайликс смеётся над тобой!"))
+					if(3)
+						user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll3", 3 SECONDS, MUTATIONS_LAYER, soundin = 'sound/magic/xylix_1.ogg', y_offset = 32)
+					if(4)
+						user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll4", 3 SECONDS, MUTATIONS_LAYER, soundin = 'sound/magic/xylix_2.ogg', y_offset = 32)
+					if(5)
+						user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll5", 3 SECONDS, MUTATIONS_LAYER, soundin = 'sound/magic/xylix_3.ogg', y_offset = 32)
+					if(6)
+						user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll6", 3 SECONDS, MUTATIONS_LAYER, soundin = 'sound/magic/xylix_4.ogg', y_offset = 32)
 			if(/datum/patron/divine/pestra)
 				message_out = span_info("An aura of clinical care encompasses [target]!")
 				message_self = span_notice("I'm sewn back together by sacred medicine!")
@@ -142,7 +168,7 @@
 				situational_bonus = 0
 				for (var/obj/O in oview(5, user))
 					if (O.type in firey_stuff)
-						situational_bonus = min(situational_bonus + 0.5, 2.5)
+						situational_bonus = min(situational_bonus + 0.5, 5)
 				if (situational_bonus > 0)
 					conditional_buff = TRUE
 			if(/datum/patron/divine/eora)
