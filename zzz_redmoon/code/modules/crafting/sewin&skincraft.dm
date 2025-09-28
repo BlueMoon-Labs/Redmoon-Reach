@@ -1,4 +1,4 @@
-/datum/crafting_recipe/roguetown/sewing/matroncloak
+     /datum/crafting_recipe/roguetown/sewing/matroncloak
     name = "Matron cloak (2 fibers, 2 cloth, 6 silk, 2 fur)"
     result = list(/obj/item/clothing/cloak/matron)
     reqs = list(/obj/item/natural/cloth = 2,
@@ -9,7 +9,7 @@
     craftdiff = 6
     sellprice = 55
 
-/datum/crafting_recipe/roguetown/leather/armor/inqgboots
+     /datum/crafting_recipe/roguetown/leather/armor/inqgboots
 	name = "Otavan Boots (4 fibers, 4 leather, 1 tallow, 2 fur)"
 	result = list(/obj/item/clothing/shoes/roguetown/boots/otavan/inqboots)
 	reqs = list(
@@ -33,7 +33,7 @@
 	sellprice = 20
 	craftdiff = 4
 
-/datum/crafting_recipe/roguetown/leather/container/satchel/otavan
+     /datum/crafting_recipe/roguetown/leather/container/satchel/otavan
 	name = "Otavan Satchel (4 fibers, 2 leather)"
 	result = list(/obj/item/storage/backpack/rogue/satchel/otavan)
 	reqs = list(
@@ -63,7 +63,7 @@
     craftdiff = 4
     sellprice = 20
 
-		/datum/crafting_recipe/roguetown/sewing/eastcloak2
+	/datum/crafting_recipe/roguetown/sewing/eastcloak2
     name = "Leather kazengun cloak (2 fibers, 4 cloth, 4 silk)"
     result = list(/obj/item/clothing/cloak/eastcloak2)
     reqs = list(/obj/item/natural/cloth = 4,
