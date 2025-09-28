@@ -147,7 +147,7 @@
 	craftdiff = 3
 
 		/datum/crafting_recipe/roguetown/sewing/eastpants2
-	name = "Ronin Dobo Robe (2 fibers, 2 leather, 2 silk)"
+	name = "Strange ripped pants (2 fibers, 2 leather, 2 silk)"
 	result = list(/obj/item/clothing/suit/roguetown/armor/basiceast/lights)
 	reqs = list(/obj/item/natural/hide/cured = 2,
 		/obj/item/natural/fibers = 2,
