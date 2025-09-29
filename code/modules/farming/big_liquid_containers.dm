@@ -135,7 +135,7 @@
 	reagents.add_reagent(/datum/reagent/consumable/caffeine/coffee, 900)
 
 /obj/structure/fermentation_keg/tea
-	desc = "A barrel with several Kazengunes characters on it indicating the vintage of the tea within. A mild, refreshing drink that calms the mind and body. Hopefully its quality is \
+	desc = "A barrel with several Kazengunese characters on it indicating the vintage of the tea within. A mild, refreshing drink that calms the mind and body. Hopefully its quality is \
 	still intact after being stored in a barrel."
 
 /obj/structure/fermentation_keg/tea/Initialize()
