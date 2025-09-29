@@ -9,8 +9,60 @@
     craftdiff = 6
     sellprice = 55
 
+     /datum/crafting_recipe/roguetown/leather/armor/inqtunic
+	name = "Inquisition Tunic (4 fibers, 4 leather, 2 tallow, 1 fur)"
+	result = list(/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/inq)
+	reqs = list(/obj/item/natural/hide/cured = 4,
+		/obj/item/reagent_containers/food/snacks/tallow = 2,
+		/obj/item/natural/fur = 1,
+		/obj/item/natural/fibers = 4,
+		)
+	sellprice = 20
+	craftdiff = 5
+
+/datum/crafting_recipe/roguetown/sewing/inquisitor
+    name = "Valorian cape (2 fibers, 4 cloth, 4 silk)"
+    result = list(/obj/item/clothing/cloak/cape/inquisitor)
+    reqs = list(/obj/item/natural/cloth = 4,
+                /obj/item/natural/fibers = 2,
+                /obj/item/natural/silk = 4)
+    tools = list(/obj/item/needle)
+    craftdiff = 5
+    sellprice = 20
+
+/datum/crafting_recipe/roguetown/sewing/inqhat
+    name = "Absolver robe (4 fibers, 2 cloth, 2 silk,2 leather)"
+    result = list(/obj/item/clothing/head/roguetown/inqhat)
+    reqs = list(/obj/item/natural/cloth = 2,
+		        /obj/item/natural/hide/cured = 2,
+                /obj/item/natural/fibers = 4,
+                /obj/item/natural/silk = 2)
+    tools = list(/obj/item/needle)
+    craftdiff = 4
+    sellprice = 20
+
+/datum/crafting_recipe/roguetown/sewing/absolutionistrobe
+    name = "Absolver robe (4 fibers, 2 cloth, 3 silk)"
+    result = list(/obj/item/clothing/cloak/absolutionistrobe)
+    reqs = list(/obj/item/natural/cloth = 2,
+                /obj/item/natural/fibers = 4,
+                /obj/item/natural/silk = 3)
+    tools = list(/obj/item/needle)
+    craftdiff = 5
+    sellprice = 20
+
+/datum/crafting_recipe/roguetown/sewing/otrhodoxhood
+    name = "Orthodox hood (4 fibers, 2 cloth, 2 silk)"
+    result = list(/obj/item/clothing/head/roguetown/roguehood/psydon)
+    reqs = list(/obj/item/natural/cloth = 2,
+                /obj/item/natural/fibers = 4,
+                /obj/item/natural/silk = 2)
+    tools = list(/obj/item/needle)
+    craftdiff = 2
+    sellprice = 10
+
      /datum/crafting_recipe/roguetown/leather/armor/inqgboots
-	name = "Otavan Boots (4 fibers, 4 leather, 1 tallow, 2 fur)"
+	name = "Inquisition Boots (4 fibers, 4 leather, 1 tallow, 2 fur)"
 	result = list(/obj/item/clothing/shoes/roguetown/boots/otavan/inqboots)
 	reqs = list(
 		/obj/item/natural/hide/cured = 4,
@@ -22,7 +74,7 @@
 	craftdiff = 5
 
 	/datum/crafting_recipe/roguetown/leather/armor/inqgloves
-	name = "Otavan Gloves (4 fibers, 2 leather, 1 tallow, 1 fur)"
+	name = "Inquitsition Gloves (4 fibers, 2 leather, 1 tallow, 1 fur)"
 	result = list(/obj/item/clothing/gloves/roguetown/otavan/inqgloves)
 	reqs = list(
 		/obj/item/natural/hide/cured = 2,
@@ -52,6 +104,16 @@
     tools = list(/obj/item/needle)
     craftdiff = 6
     sellprice = 30
+
+	/datum/crafting_recipe/roguetown/sewing/kazenjab
+    name = "Kazengun hijab (2 fibers, 2 cloth, 1 silk)"
+    result = list(/obj/item/clothing/head/roguetown/roguehood/shalal/hijab/kazengunese)
+    reqs = list(/obj/item/natural/cloth = 2,
+                /obj/item/natural/fibers = 2,
+                /obj/item/natural/silk = 1)
+    tools = list(/obj/item/needle)
+    craftdiff = 4
+    sellprice = 20
 
 	/datum/crafting_recipe/roguetown/sewing/eastcloak1
     name = "Cloud-cutter's cloak (2 fibers, 4 cloth, 4 silk)"
@@ -105,6 +167,27 @@
 	)
 	craftdiff = 6
 	 sellprice = 80
+
+	/datum/crafting_recipe/roguetown/leather/container/scabbard/sword/kazengun_kodachi
+	name = "Kazengun Kodachi scabbard (4 leather, 2 fiber, 1 small log, 1 steel ingot)"
+	result = list(/obj/item/rogueweapon/scabbard/sword/kazengun/kodachi)
+	reqs = list(/obj/item/natural/hide/cured = 4,
+		/obj/item/natural/fibers = 2,
+		/obj/item/grown/log/tree/small = 1,
+		/obj/item/ingot/steel = 1,
+	)
+	craftdiff = 6
+	 sellprice = 30
+
+    /datum/crafting_recipe/roguetown/leather/container/scabbard/sword/kazengun_sneath
+	name = "Kazengun dagger sneath (4 leather, 2 fiber, 1 iron ignot)"
+	result = list(/obj/item/rogueweapon/scabbard/sheath/kazengun)
+	reqs = list(/obj/item/natural/hide/cured = 4,
+		/obj/item/natural/fibers = 2,
+		/obj/item/ingot/iron = 1,
+	)
+	craftdiff = 4
+	 sellprice = 20
 
     /datum/crafting_recipe/roguetown/sewing/worn_dobo
 	name = "Worn Dobo Robe (4 fibers, 4 cloth, 3 silk)"
