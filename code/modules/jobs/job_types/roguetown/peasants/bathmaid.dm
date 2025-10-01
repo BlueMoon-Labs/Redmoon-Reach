@@ -271,4 +271,4 @@
 
 /obj/item/bath/soap/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/slippery, 80)
+	AddComponent(/datum/component/slippery, 10)
