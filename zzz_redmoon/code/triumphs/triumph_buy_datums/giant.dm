@@ -1,19 +1,19 @@
-/datum/triumph_buy/tiny
-	triumph_buy_id = "Tiny"
-	desc = "Tiny!  Special Trait. Don't use, if you already have Special Trait."
+/datum/triumph_buy/giant
+	triumph_buy_id = "Giant"
+	desc = "Giant! Special Trait. Don't use, if you already have Special Trait."
 	triumph_cost = 10
 	category = TRIUMPH_CAT_CHARACTER
 	pre_round_only = FALSE
 	visible_on_active_menu = FALSE
 
 // We fire this on activate, also DAMN is this nasty
-/datum/triumph_buy/tiny/on_activate(mob/living/carbon/human/H)
+/datum/triumph_buy/giant/on_activate(mob/living/carbon/human/H)
 	if(!usr)
 		return
 	if(usr.client.prefs.next_special_trait)
 		print_special_text(usr, usr.client.prefs.next_special_trait)
 		return
-	usr.client.prefs.next_special_trait = /datum/special_trait/tiny
+	usr.client.prefs.next_special_trait = /datum/special_trait/backproblems
 	if(usr.client.prefs.next_special_trait)
 		log_game("SPECIALS: Rolled [usr.client.prefs.next_special_trait] for ckey: [usr.ckey]")
 		print_special_text(usr, usr.client.prefs.next_special_trait)
