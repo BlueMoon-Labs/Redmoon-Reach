@@ -1,5 +1,4 @@
 /datum/crafting_recipe/roguetown/sewing/matroncloak
-<<<<<<< HEAD
     name = "Matron cloak (2 fibers, 2 cloth, 6 silk, 2 fur, 1 essence)"
     result = list(/obj/item/clothing/cloak/matron)
     reqs = list(/obj/item/natural/cloth = 2,
@@ -11,17 +10,6 @@
     tools = list(/obj/item/needle)
     craftdiff = 6
     sellprice = 55
-=======
-	name = "Matron cloak (2 fibers, 2 cloth, 6 silk, 2 fur)"
-	result = list(/obj/item/clothing/cloak/matron)
-	reqs = list(/obj/item/natural/cloth = 2,
-				/obj/item/natural/fibers = 2,
-				/obj/item/natural/fur = 2,
-				/obj/item/natural/silk = 6)
-	tools = list(/obj/item/needle)
-	craftdiff = 6
-	sellprice = 55
->>>>>>> 742b68562693a1103f9a9d352bfeeff69f3c9993
 
 /datum/crafting_recipe/roguetown/leather/armor/inqtunic
 	name = "Inquisition Tunic (4 fibers, 4 leather, 2 tallow, 1 fur)"
@@ -34,8 +22,18 @@
 	sellprice = 20
 	craftdiff = 5
 
-/datum/crafting_recipe/roguetown/sewing/inquisitor
-<<<<<<< HEAD
+/datum/crafting_recipe/roguetown/sewing/ordinator
+    name = "Ordinator cape (2 fibers, 4 cloth, 4 silk, 1 essence)"
+    result = list(/obj/item/clothing/cloak/ordinatorcape)
+    reqs = list(/obj/item/natural/cloth = 4,
+                /obj/item/natural/fibers = 2,
+                /obj/item/natural/silk = 4
+				/obj/item/natural/cured/essence = 1)
+    tools = list(/obj/item/needle)
+    craftdiff = 5
+    sellprice = 20
+
+	/datum/crafting_recipe/roguetown/sewing/inquisitor
     name = "Valorian cape (2 fibers, 4 cloth, 4 silk, 1 essence)"
     result = list(/obj/item/clothing/cloak/cape/inquisitor)
     reqs = list(/obj/item/natural/cloth = 4,
@@ -56,27 +54,16 @@
     tools = list(/obj/item/needle)
     craftdiff = 4
     sellprice = 20
-=======
-	name = "Valorian cape (2 fibers, 4 cloth, 4 silk)"
-	result = list(/obj/item/clothing/cloak/cape/inquisitor)
-	reqs = list(/obj/item/natural/cloth = 4,
-				/obj/item/natural/fibers = 2,
-				/obj/item/natural/silk = 4)
-	tools = list(/obj/item/needle)
-	craftdiff = 5
-	sellprice = 20
 
-/datum/crafting_recipe/roguetown/sewing/inqhat
-	name = "Absolver robe (4 fibers, 2 cloth, 2 silk,2 leather)"
-	result = list(/obj/item/clothing/head/roguetown/inqhat)
-	reqs = list(/obj/item/natural/cloth = 2,
-				/obj/item/natural/hide/cured = 2,
-				/obj/item/natural/fibers = 4,
-				/obj/item/natural/silk = 2)
-	tools = list(/obj/item/needle)
-	craftdiff = 4
-	sellprice = 20
->>>>>>> 742b68562693a1103f9a9d352bfeeff69f3c9993
+	/datum/crafting_recipe/roguetown/sewing/inqcap
+    name = "Inquisition cap (4 fibers, 2 silk, 4 leather)"
+    result = list(/obj/item/clothing/head/roguetown/inqhat/cap)
+    reqs = list(/obj/item/natural/hide/cured = 4,
+                /obj/item/natural/fibers = 4,
+                /obj/item/natural/silk = 2)
+    tools = list(/obj/item/needle)
+    craftdiff = 4
+    sellprice = 20
 
 /datum/crafting_recipe/roguetown/sewing/absolutionistrobe
 	name = "Absolver robe (4 fibers, 2 cloth, 3 silk)"
@@ -133,7 +120,6 @@
 	craftdiff = 5
 
 /datum/crafting_recipe/roguetown/sewing/captain_cloak
-<<<<<<< HEAD
     name = "Fable Cloak (2 fibers, 4 cloth, 6 silk, 1 essence)"
     result = list(/obj/item/clothing/cloak/captain)
     reqs = list(/obj/item/natural/cloth = 4,
@@ -144,16 +130,6 @@
     tools = list(/obj/item/needle)
     craftdiff = 6
     sellprice = 50
-=======
-	name = "Fable Cloak (2 fibers, 4 cloth, 6 silk)"
-	result = list(/obj/item/clothing/cloak/captain)
-	reqs = list(/obj/item/natural/cloth = 4,
-				/obj/item/natural/fibers = 2,
-				/obj/item/natural/silk = 6)
-	tools = list(/obj/item/needle)
-	craftdiff = 6
-	sellprice = 30
->>>>>>> 742b68562693a1103f9a9d352bfeeff69f3c9993
 
 /datum/crafting_recipe/roguetown/sewing/kazenjab
 	name = "Kazengun hijab (2 fibers, 2 cloth, 1 silk)"
