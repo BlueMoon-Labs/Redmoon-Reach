@@ -1,6 +1,7 @@
 /datum/job/roguetown/warden
 	min_pq = 0
 	max_pq = null
+	round_contrib_points = 5
 
 /datum/outfit/job/roguetown/warden/forester/pre_equip(mob/living/carbon/human/H)
 	..()
