@@ -10,7 +10,7 @@
     tools = list(/obj/item/needle)
     craftdiff = 6
     sellprice = 55
-
+//Одежда и плащи инквизиции.
 /datum/crafting_recipe/roguetown/leather/armor/inqtunic
 	name = "Inquisition Tunic (4 fibers, 4 leather, 2 tallow, 1 fur)"
 	result = list(/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/inq)
@@ -61,6 +61,26 @@
     reqs = list(/obj/item/natural/hide/cured = 4,
                 /obj/item/natural/fibers = 4,
                 /obj/item/natural/silk = 2)
+    tools = list(/obj/item/needle)
+    craftdiff = 4
+    sellprice = 20
+
+	/datum/crafting_recipe/roguetown/sewing/overseerhood
+    name = "Sack hood (4 fibers,2 cloth, 1 leather)"
+    result = list(/obj/item/clothing/mask/rogue/sack/overseer)
+    reqs = list(/obj/item/natural/hide/cured = 1,
+                /obj/item/natural/fibers = 4,
+                /obj/item/natural/cloth = 2)
+    tools = list(/obj/item/needle)
+    craftdiff = 3
+    sellprice = 20
+
+	/datum/crafting_recipe/roguetown/sewing/overseergamb
+    name = "Inquisition gambeson (4 fibers, 2 leather, 5 cloth)"
+    result = list(/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/inq/overseer)
+    reqs = list(/obj/item/natural/hide/cured = 2,
+                /obj/item/natural/fibers = 4,
+				/obj/item/natural/cloth = 5)
     tools = list(/obj/item/needle)
     craftdiff = 4
     sellprice = 20
@@ -119,6 +139,36 @@
 	sellprice = 20
 	craftdiff = 5
 
+	/datum/crafting_recipe/roguetown/leather/armor/overseerpants
+	name = "Overseer Pants (2 fibers, 4 leather, 1 tallow)"
+	result = list(/obj/item/clothing/under/roguetown/heavy_leather_pants/otavan/overseer)
+	reqs = list(
+		/obj/item/natural/hide/cured = 4,
+		/obj/item/reagent_containers/food/snacks/tallow = 1,
+		/obj/item/natural/fibers = 2)
+	sellprice = 10
+	craftdiff = 4
+
+	/datum/crafting_recipe/roguetown/leather/armor/overseergloves
+	name = "Overseer gloves (1 fibers, 2 leather, 1 tallow)"
+	result = list(/obj/item/clothing/gloves/roguetown/otavan/overseer)
+	reqs = list(
+		/obj/item/natural/hide/cured = 2,
+		/obj/item/reagent_containers/food/snacks/tallow = 1,
+		/obj/item/natural/fibers = 1)
+	sellprice = 10
+	craftdiff = 4
+
+	/datum/crafting_recipe/roguetown/leather/armor/overseerbelt
+	name = "Belt with pouches (2 fibers, 4 leather, 1 tallow)"
+	result = list(/obj/item/storage/belt/rogue/leather/overseer)
+	reqs = list(
+		/obj/item/natural/hide/cured = 4,
+		/obj/item/reagent_containers/food/snacks/tallow = 1,
+		/obj/item/natural/fibers = 2)
+	sellprice = 20
+	craftdiff = 3
+//Одежда и плащи придворных.
 /datum/crafting_recipe/roguetown/sewing/captain_cloak
     name = "Fable Cloak (2 fibers, 4 cloth, 6 silk, 1 essence)"
     result = list(/obj/item/clothing/cloak/captain)
@@ -130,7 +180,7 @@
     tools = list(/obj/item/needle)
     craftdiff = 6
     sellprice = 50
-
+//Одежда и ножны казенгюна.
 /datum/crafting_recipe/roguetown/sewing/kazenjab
 	name = "Kazengun hijab (2 fibers, 2 cloth, 1 silk)"
 	result = list(/obj/item/clothing/head/roguetown/roguehood/shalal/hijab/kazengunese)
