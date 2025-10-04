@@ -27,18 +27,18 @@
     result = list(/obj/item/clothing/cloak/ordinatorcape)
     reqs = list(/obj/item/natural/cloth = 4,
                 /obj/item/natural/fibers = 2,
-                /obj/item/natural/silk = 4
+                /obj/item/natural/silk = 4,
 				/obj/item/natural/cured/essence = 1)
     tools = list(/obj/item/needle)
     craftdiff = 5
     sellprice = 20
 
-	/datum/crafting_recipe/roguetown/sewing/inquisitor
+/datum/crafting_recipe/roguetown/sewing/inquisitor
     name = "Valorian cape (2 fibers, 4 cloth, 4 silk, 1 essence)"
     result = list(/obj/item/clothing/cloak/cape/inquisitor)
     reqs = list(/obj/item/natural/cloth = 4,
                 /obj/item/natural/fibers = 2,
-                /obj/item/natural/silk = 4
+                /obj/item/natural/silk = 4,
 				/obj/item/natural/cured/essence = 1)
     tools = list(/obj/item/needle)
     craftdiff = 5
@@ -55,7 +55,7 @@
     craftdiff = 4
     sellprice = 20
 
-	/datum/crafting_recipe/roguetown/sewing/inqcap
+/datum/crafting_recipe/roguetown/sewing/inqcap
     name = "Inquisition cap (4 fibers, 2 silk, 4 leather)"
     result = list(/obj/item/clothing/head/roguetown/inqhat/cap)
     reqs = list(/obj/item/natural/hide/cured = 4,
@@ -65,7 +65,7 @@
     craftdiff = 4
     sellprice = 20
 
-	/datum/crafting_recipe/roguetown/sewing/overseerhood
+/datum/crafting_recipe/roguetown/sewing/overseerhood
     name = "Sack hood (4 fibers,2 cloth, 1 leather)"
     result = list(/obj/item/clothing/mask/rogue/sack/overseer)
     reqs = list(/obj/item/natural/hide/cured = 1,
@@ -75,7 +75,7 @@
     craftdiff = 3
     sellprice = 20
 
-	/datum/crafting_recipe/roguetown/sewing/overseergamb
+/datum/crafting_recipe/roguetown/sewing/overseergamb
     name = "Inquisition gambeson (4 fibers, 2 leather, 5 cloth)"
     result = list(/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/inq/overseer)
     reqs = list(/obj/item/natural/hide/cured = 2,
