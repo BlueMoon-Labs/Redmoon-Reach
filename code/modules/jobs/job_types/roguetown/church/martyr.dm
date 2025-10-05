@@ -446,8 +446,7 @@
 		TRAIT_HEAVYARMOR,
 		TRAIT_STEELHEARTED,
 		TRAIT_SILVER_BLESSED,
-		TRAIT_EMPATH,
-		TRAIT_DUALWIELDER
+		TRAIT_EMPATH
 	)
 
 	//No undeath-adjacent virtues for a role that can sacrifice itself. The Ten like their sacrifices 'pure'. (I actually didn't want to code returning those virtue traits post-sword use)

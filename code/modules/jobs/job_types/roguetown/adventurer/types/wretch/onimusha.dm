@@ -133,10 +133,10 @@
 			l_hand = /obj/item/rogueweapon/sword/long/kriegmesser
 		if ("Zweihander")
 			l_hand = /obj/item/rogueweapon/greatsword/zwei
-		if ("Dual Gladius")
-			ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
-			beltl = /obj/item/rogueweapon/sword/iron/short/gladius
-			l_hand = /obj/item/rogueweapon/sword/iron/short/gladius
+		// if ("Dual Gladius")
+		// 	ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
+		// 	beltl = /obj/item/rogueweapon/sword/iron/short/gladius
+		// 	l_hand = /obj/item/rogueweapon/sword/iron/short/gladius
 	wretch_select_bounty(H)
 
 /datum/advclass/wretch/sohei
