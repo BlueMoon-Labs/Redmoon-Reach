@@ -457,7 +457,6 @@
 		/datum/virtue/combat/rotcured,
 		/datum/virtue/utility/deadened,
 		/datum/virtue/utility/deathless,
-		/datum/virtue/combat/dualwielder,
 		/datum/virtue/heretic/zchurch_keyholder,
 		/datum/virtue/combat/hollow_life,
 	)
