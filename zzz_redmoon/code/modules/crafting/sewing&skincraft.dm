@@ -139,7 +139,7 @@
 	sellprice = 20
 	craftdiff = 5
 
-	/datum/crafting_recipe/roguetown/leather/armor/overseerpants
+/datum/crafting_recipe/roguetown/leather/armor/overseerpants
 	name = "Overseer Pants (2 fibers, 4 leather, 1 tallow)"
 	result = list(/obj/item/clothing/under/roguetown/heavy_leather_pants/otavan/overseer)
 	reqs = list(
@@ -149,7 +149,7 @@
 	sellprice = 10
 	craftdiff = 4
 
-	/datum/crafting_recipe/roguetown/leather/armor/overseergloves
+/datum/crafting_recipe/roguetown/leather/armor/overseergloves
 	name = "Overseer gloves (1 fibers, 2 leather, 1 tallow)"
 	result = list(/obj/item/clothing/gloves/roguetown/otavan/overseer)
 	reqs = list(
@@ -159,7 +159,7 @@
 	sellprice = 10
 	craftdiff = 4
 
-	/datum/crafting_recipe/roguetown/leather/armor/overseerbelt
+/datum/crafting_recipe/roguetown/leather/armor/overseerbelt
 	name = "Belt with pouches (2 fibers, 4 leather, 1 tallow)"
 	result = list(/obj/item/storage/belt/rogue/leather/overseer)
 	reqs = list(
