@@ -631,7 +631,7 @@
 
 /obj/item/clothing/cloak/martyr/ComponentInitialize()
     . = ..()
-    AddComponent(/datum/component/storage/concrete/roguetown/cloak
+    AddComponent(/datum/component/storage/concrete/roguetown/cloak)
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/holysee
 	name = "holy silver plate"
