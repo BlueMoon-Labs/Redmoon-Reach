@@ -17,7 +17,6 @@
 /datum/virtue/size/tiny
 	name = "Tiny"
 	desc = "I've always been less, weaker and less hardy than the average person."
-	added_traits = list(TRAIT_BIGGUY)
 	custom_text = "Increases your sprite size."
 
 /datum/virtue/size/tiny/apply_to_human(mob/living/carbon/human/recipient)
