@@ -2,9 +2,9 @@
 	name = "blacksteel bevor"
 	desc = "A blacksteel bevor that protects the lower part of the head, that being the neck, mouth and nose."
 	icon_state = "bl_bevor"
-	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
-	sleeved = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
+	icon = 'zzz_redmoon/icons/blacksteel/blkknight.dmi'
+	mob_overlay_icon = 'zzz_redmoon/icons/blacksteel/blkknight_onmob.dmi'
+	sleeved = 'zzz_redmoon/icons/blacksteel/blkknight_onmob.dmi'
 	armor = ARMOR_BEVOR_BL
 	smeltresult = /obj/item/ingot/blacksteel
 	max_integrity = ARMOR_INT_SIDE_BLACKSTEEL
