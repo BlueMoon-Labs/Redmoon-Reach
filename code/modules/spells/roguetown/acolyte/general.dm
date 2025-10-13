@@ -110,7 +110,7 @@
 				situational_bonus = 0
 				// the bloodier the area around our target is, the more we heal
 				for (var/obj/effect/decal/cleanable/blood/O in oview(5, target))
-					situational_bonus = min(situational_bonus + 0.1, 5)
+					situational_bonus = min(situational_bonus + 0.2, 5)
 				conditional_buff = TRUE
 			if(/datum/patron/divine/necra)
 				message_out = span_info("A sense of quiet respite radiates from [target]!")
@@ -128,24 +128,27 @@
 				situational_bonus = rand(1, 6)
 				switch(situational_bonus)
 					if(1)
-						user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll1", 3 SECONDS, MUTATIONS_LAYER, soundin = 'sound/misc/psydong.ogg', y_offset = 32)
-						user.psydo_nyte()
-						var/turf/T = get_step(get_step(user, NORTH), NORTH)
-						T.Beam(user, icon_state="lightning[rand(1,12)]", time = 5)
-						user.adjustFireLoss(150)
-						if(ishuman(user))
-							var/mob/living/carbon/human/H = user
-							H.electrocution_animation(40)
-						GLOB.scarlet_round_stats[STATS_PEOPLE_SMITTEN]++
-						to_chat(user, span_danger("Ксайликсу это очень не понравилось!"))
+						if(prob(75+(user.STALUC)))
+							user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll2", 3 SECONDS, MUTATIONS_LAYER, soundin = 'sound/magic/mockery.ogg', y_offset = 32)
+							user.psydo_nyte()
+							var/turf/target_tile = get_ranged_target_turf(user, pick(GLOB.alldirs), 12)
+							user.throw_at(target = target_tile, range = 12, speed = 2, thrower = user, spin = TRUE, force = 30)
+							user.Knockdown(1 SECONDS)
+							GLOB.scarlet_round_stats[STATS_PEOPLE_SMITTEN]++
+							to_chat(user, span_danger("Xylix is ​​laughing at you!"))
+						else
+							user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll1", 3 SECONDS, MUTATIONS_LAYER, soundin = 'sound/misc/psydong.ogg', y_offset = 32)
+							user.psydo_nyte()
+							var/turf/T = get_step(get_step(user, NORTH), NORTH)
+							T.Beam(user, icon_state="lightning[rand(1,12)]", time = 5)
+							user.adjustFireLoss(150)
+							if(ishuman(user))
+								var/mob/living/carbon/human/H = user
+								H.electrocution_animation(40)
+							GLOB.scarlet_round_stats[STATS_PEOPLE_SMITTEN]++
+							to_chat(user, span_danger("Roll the dice better, chuclkenuts!"))
 					if(2)
-						user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll2", 3 SECONDS, MUTATIONS_LAYER, soundin = 'sound/magic/mockery.ogg', y_offset = 32)
-						user.psydo_nyte()
-						var/turf/target_tile = get_ranged_target_turf(user, pick(GLOB.alldirs), 12)
-						user.throw_at(target = target_tile, range = 12, speed = 2, thrower = user, spin = TRUE, force = 30)
-						user.Knockdown(1 SECONDS)
-						GLOB.scarlet_round_stats[STATS_PEOPLE_SMITTEN]++
-						to_chat(user, span_danger("Ксайликс смеётся над тобой!"))
+						user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll3", 3 SECONDS, MUTATIONS_LAYER, soundin = 'sound/magic/xylix_1.ogg', y_offset = 32)
 					if(3)
 						user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "roll3", 3 SECONDS, MUTATIONS_LAYER, soundin = 'sound/magic/xylix_1.ogg', y_offset = 32)
 					if(4)
@@ -163,12 +166,11 @@
 			if(/datum/patron/divine/malum)
 				message_out = span_info("A tempering heat is discharged out of [target]!")
 				message_self = span_info("I feel the heat of a forge soothing my pains!")
-				var/list/firey_stuff = list(/obj/machinery/light/rogue/torchholder, /obj/machinery/light/rogue/campfire, /obj/machinery/light/rogue/hearth, /obj/machinery/light/rogue/wallfire, /obj/machinery/light/rogue/wallfire/candle, /obj/machinery/light/rogue/forge)
 				// extra healing for every source of fire/light near us
 				situational_bonus = 0
 				for (var/obj/O in oview(5, user))
-					if (O.type in firey_stuff)
-						situational_bonus = min(situational_bonus + 0.5, 5)
+					if (istype(O, /obj/machinery/light/rogue))
+						situational_bonus = min(situational_bonus + 0.2, 5)
 				if (situational_bonus > 0)
 					conditional_buff = TRUE
 			if(/datum/patron/divine/eora)
@@ -188,7 +190,7 @@
 				// set up a ritual pile of bones (or just cast near a stack of bones whatever) around us for massive bonuses, cap at 50 for 75 healing total (wowie)
 				situational_bonus = 0
 				for (var/obj/item/natural/bone/O in oview(5, user))
-					situational_bonus += (0.5)
+					situational_bonus += 0.2
 				for (var/obj/item/natural/bundle/bone/S in oview(5, user))
 					situational_bonus += (S.amount * 0.5)
 				if (situational_bonus > 0)
