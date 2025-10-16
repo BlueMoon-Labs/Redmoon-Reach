@@ -38,8 +38,8 @@
 /datum/outfit/job/roguetown/wretch/heretic/pre_equip(mob/living/carbon/human/H)
 	..()
 	if ((istype(H.patron, /datum/patron/divine/astrata) || istype(H.patron, /datum/patron/divine/necra) || istype(H.patron, /datum/patron/divine/eora) || istype(H.patron, /datum/patron/divine/ravox) || istype(H.patron, /datum/patron/old_god)))
-		to_chat(H, span_warning("My former deity frowned upon my practices. I have since turned to XYLIX..."))
-		H.set_patron(/datum/patron/divine/xylix)
+		to_chat(H, span_warning("My former deity frowned upon my practices. I have since turned to ZIZO..."))
+		H.set_patron(/datum/patron/inhumen/zizo)
 	to_chat(H, span_warning("You father your unholy cause through the most time-tested of ways: hard, heavy steel in both arms and armor."))
 	H.mind.current.faction += "[H.name]_faction"
 	H.set_blindness(0)
@@ -95,27 +95,27 @@
 /datum/outfit/job/roguetown/wretch/heretic/choose_loadout(mob/living/carbon/human/H) // some got +1 to their relevant patron skill
 	. = ..()
 	switch(H.patron?.type)
-		// if(/datum/patron/inhumen/zizo)
-		// 	H.cmode_music = 'sound/music/combat_heretic.ogg'
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/head/roguetown/helmet/bascinet/pigface, SLOT_HEAD, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/neck/roguetown/zcross/iron, SLOT_RING, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/steel, SLOT_WEAR_MASK, TRUE)
-		// if(/datum/patron/inhumen/matthios)
-		// 	H.cmode_music = 'sound/music/combat_matthios.ogg'
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold, SLOT_HEAD, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/steel, SLOT_WEAR_MASK, TRUE)
-		// if(/datum/patron/inhumen/baotha)
-		// 	H.cmode_music = 'sound/music/combat_baotha.ogg'
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan, SLOT_HEAD, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/steel, SLOT_WEAR_MASK, TRUE)
-		// if(/datum/patron/inhumen/graggar)
-		// 	H.cmode_music = 'sound/music/combat_graggar.ogg'
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/head/roguetown/helmet/heavy/guard, SLOT_HEAD, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/steel, SLOT_WEAR_MASK, TRUE)
+		if(/datum/patron/inhumen/zizo)
+			H.cmode_music = 'sound/music/combat_heretic.ogg'
+			H.equip_to_slot_or_del(new /obj/item/clothing/head/roguetown/helmet/bascinet/pigface, SLOT_HEAD, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/neck/roguetown/zcross/iron, SLOT_RING, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/steel, SLOT_WEAR_MASK, TRUE)
+		if(/datum/patron/inhumen/matthios)
+			H.cmode_music = 'sound/music/combat_matthios.ogg'
+			H.equip_to_slot_or_del(new /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold, SLOT_HEAD, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/steel, SLOT_WEAR_MASK, TRUE)
+		if(/datum/patron/inhumen/baotha)
+			H.cmode_music = 'sound/music/combat_baotha.ogg'
+			H.equip_to_slot_or_del(new /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan, SLOT_HEAD, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/steel, SLOT_WEAR_MASK, TRUE)
+		if(/datum/patron/inhumen/graggar)
+			H.cmode_music = 'sound/music/combat_graggar.ogg'
+			H.equip_to_slot_or_del(new /obj/item/clothing/head/roguetown/helmet/heavy/guard, SLOT_HEAD, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/steel, SLOT_WEAR_MASK, TRUE)
 //		if(/datum/patron/divine/astrata) // Just fuck off
 //			cloak = /obj/item/clothing/cloak/tabard/crusader/astrata
 //			id = /obj/item/clothing/neck/roguetown/psicross/astrata
@@ -230,8 +230,8 @@
 /datum/outfit/job/roguetown/wretch/heretic_wanderer/pre_equip(mob/living/carbon/human/H)
 	..()
 	if ((istype(H.patron, /datum/patron/divine/astrata) || istype(H.patron, /datum/patron/divine/necra) || istype(H.patron, /datum/patron/divine/eora) || istype(H.patron, /datum/patron/divine/ravox) || istype(H.patron, /datum/patron/old_god)))
-		to_chat(H, span_warning("My former deity frowned upon my practices. I have since turned to XYLIX..."))
-		H.set_patron(/datum/patron/divine/xylix)
+		to_chat(H, span_warning("My former deity frowned upon my practices. I have since turned to ZIZO..."))
+		H.set_patron(/datum/patron/inhumen/zizo)
 	to_chat(H, span_warning("Nimble of dagger and foot both, you are the shadowy herald of the cabal. They will not see you coming."))
 	H.mind.current.faction += "[H.name]_faction"
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
@@ -290,23 +290,23 @@
 /datum/outfit/job/roguetown/wretch/heretic_wanderer/choose_loadout(mob/living/carbon/human/H) // some got +1 to their patron skill, same deal as armoured heretics
 	. = ..()
 	switch(H.patron?.type)
-		// if(/datum/patron/inhumen/zizo)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/neck/roguetown/zcross/iron, SLOT_RING, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/copper, SLOT_WEAR_MASK, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
-		// 	H.cmode_music = 'sound/music/combat_heretic.ogg'
-		// if(/datum/patron/inhumen/matthios)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/copper, SLOT_WEAR_MASK, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
-		// 	H.cmode_music = 'sound/music/combat_matthios.ogg'
-		// if(/datum/patron/inhumen/baotha)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/copper, SLOT_WEAR_MASK, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
-		// 	H.cmode_music = 'sound/music/combat_baotha.ogg'
-		// if(/datum/patron/inhumen/graggar)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/copper, SLOT_WEAR_MASK, TRUE)
-		// 	H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
-		// 	H.cmode_music = 'sound/music/combat_graggar.ogg'
+		if(/datum/patron/inhumen/zizo)
+			H.equip_to_slot_or_del(new /obj/item/clothing/neck/roguetown/zcross/iron, SLOT_RING, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/copper, SLOT_WEAR_MASK, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
+			H.cmode_music = 'sound/music/combat_heretic.ogg'
+		if(/datum/patron/inhumen/matthios)
+			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/copper, SLOT_WEAR_MASK, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
+			H.cmode_music = 'sound/music/combat_matthios.ogg'
+		if(/datum/patron/inhumen/baotha)
+			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/copper, SLOT_WEAR_MASK, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
+			H.cmode_music = 'sound/music/combat_baotha.ogg'
+		if(/datum/patron/inhumen/graggar)
+			H.equip_to_slot_or_del(new /obj/item/clothing/mask/rogue/facemask/copper, SLOT_WEAR_MASK, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/cloak/cape/crusader, SLOT_CLOAK, TRUE)
+			H.cmode_music = 'sound/music/combat_graggar.ogg'
 //		if(/datum/patron/divine/astrata)
 //			id = /obj/item/clothing/neck/roguetown/psicross/astrata
 //			H.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
