@@ -334,6 +334,7 @@
 	weight = 50
 
 /datum/special_trait/backproblems/on_apply(mob/living/carbon/human/character)
+	ADD_TRAIT(character, TRAIT_BIGGUY, "special")
 	character.change_stat("strength", 2)
 	character.change_stat("constitution", 1)
 	character.change_stat("speed", -2)

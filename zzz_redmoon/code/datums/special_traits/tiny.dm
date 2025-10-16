@@ -13,3 +13,13 @@
 	character.transform = character.transform.Scale(0.75, 0.75)
 	character.transform = character.transform.Translate(0, (-0.25 * 16))
 	character.update_transform()
+
+/datum/virtue/size/tiny
+	name = "Tiny"
+	desc = "I've always been less, weaker and less hardy than the average person."
+	custom_text = "Increases your sprite size."
+
+/datum/virtue/size/tiny/apply_to_human(mob/living/carbon/human/recipient)
+	recipient.transform = recipient.transform.Scale(0.75, 0.75)
+	recipient.transform = recipient.transform.Translate(0, (0.25 * 16))
+	recipient.update_transform()

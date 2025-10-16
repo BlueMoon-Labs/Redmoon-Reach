@@ -227,7 +227,7 @@
 	)
 	if(should_wear_femme_clothes(H))
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/silkydress/random
-		shirt = /obj/item/clothing/suit/roguetown/armor/corset
+		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/corset
 		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
 		shoes = /obj/item/clothing/shoes/roguetown/anklets
 	else
@@ -271,4 +271,4 @@
 
 /obj/item/bath/soap/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/slippery, 80)
+	AddComponent(/datum/component/slippery, 10)
