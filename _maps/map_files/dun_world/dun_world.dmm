@@ -10362,9 +10362,18 @@
 /area/rogue/indoors/town/tavern)
 "cVq" = (
 /obj/structure/closet/crate/chest/crate,
-/obj/effect/spawner/lootdrop/potion_stats,
-/obj/effect/spawner/lootdrop/potion_stats,
-/obj/effect/spawner/lootdrop/potion_stats,
+/obj/effect/spawner/lootdrop/potion_stats{
+	loot = list(/obj/item/reagent_containers/glass/bottle/alchemical/strpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/perpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/endpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/conpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/intpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/spdpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/lucpot = 10);
+	spawned = null
+	},
+/obj/effect/spawner/lootdrop/potion_stats{
+	loot = list(/obj/item/reagent_containers/glass/bottle/alchemical/strpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/perpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/endpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/conpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/intpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/spdpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/lucpot = 10);
+	spawned = null
+	},
+/obj/effect/spawner/lootdrop/potion_stats{
+	loot = list(/obj/item/reagent_containers/glass/bottle/alchemical/strpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/perpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/endpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/conpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/intpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/spdpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/lucpot = 10);
+	spawned = null
+	},
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town/shop)
 "cVA" = (
@@ -13174,7 +13183,10 @@
 "dMS" = (
 /obj/structure/table/church,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/shelter)
 "dMX" = (
@@ -19760,7 +19772,10 @@
 /area/rogue/outdoors/town)
 "fBq" = (
 /obj/structure/rack/rogue,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/under/cave/skeletoncrypt)
 "fBz" = (
@@ -22889,7 +22904,10 @@
 	},
 /obj/effect/spawner/lootdrop/roguetown/dungeon,
 /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/beach)
 "gxF" = (
@@ -27404,7 +27422,10 @@
 	},
 /obj/item/clothing/neck/roguetown/psicross/pestra,
 /obj/item/clothing/neck/roguetown/zcross/aalloy,
-/obj/effect/spawner/lootdrop/potion_poisons,
+/obj/effect/spawner/lootdrop/potion_poisons{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/poison = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongpoison = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampoison = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /obj/item/roguegear{
 	pixel_x = -5;
 	pixel_y = 13
@@ -30877,8 +30898,11 @@
 /area/rogue/indoors/cave)
 "iIH" = (
 /obj/structure/closet/crate/chest/lootbox,
-/obj/effect/spawner/lootdrop/potion_stats,
 /obj/item/clothing/neck/roguetown/talkstone,
+/obj/effect/spawner/lootdrop/potion_stats{
+	loot = list(/obj/item/reagent_containers/glass/bottle/alchemical/strpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/perpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/endpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/conpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/intpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/spdpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/lucpot = 10);
+	spawned = null
+	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dragonden)
 "iII" = (
@@ -34588,7 +34612,10 @@
 "jMI" = (
 /obj/structure/bed/rogue/inn/wool,
 /obj/item/bedsheet/rogue/fabric,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/shelter/mountains/decap)
 "jMK" = (
@@ -36177,7 +36204,10 @@
 /area/rogue/indoors/town)
 "kis" = (
 /obj/structure/closet/crate/coffin,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/under/cave/scarymaze)
 "kiw" = (
@@ -41311,7 +41341,10 @@
 /area/rogue/outdoors/mountains/decap/gunduzirak)
 "lEM" = (
 /obj/structure/closet/crate/coffin,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/scarymaze)
 "lEY" = (
@@ -42044,7 +42077,10 @@
 	dir = 10;
 	icon_state = "largetable"
 	},
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/shelter)
 "lQf" = (
@@ -44411,7 +44447,10 @@
 /area/rogue/under/town/basement/keep)
 "mzX" = (
 /obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/potion_poisons,
+/obj/effect/spawner/lootdrop/potion_poisons{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/poison = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongpoison = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampoison = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/under/cave/skeletoncrypt)
 "mAb" = (
@@ -52968,7 +53007,10 @@
 /area/rogue/under/cave/orcdungeon)
 "oVV" = (
 /obj/structure/bed/rogue/shit,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/rogue/hay,
 /area/rogue/indoors/shelter/mountains/decap)
 "oVW" = (
@@ -56468,7 +56510,10 @@
 	},
 /obj/structure/fluff/walldeco/wantedposter,
 /obj/item/reagent_containers/glass/bowl/aalloy,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/shelter/mountains/decap)
 "pTK" = (
@@ -58256,7 +58301,10 @@
 /area/rogue/indoors/town/dwarfin)
 "qsZ" = (
 /obj/structure/bed/rogue/shit,
-/obj/effect/spawner/lootdrop/potion_stats,
+/obj/effect/spawner/lootdrop/potion_stats{
+	loot = list(/obj/item/reagent_containers/glass/bottle/alchemical/strpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/perpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/endpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/conpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/intpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/spdpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/lucpot = 10);
+	spawned = null
+	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/shelter/mountains/decap)
 "qtb" = (
@@ -58597,7 +58645,10 @@
 /area/rogue/outdoors/town/roofs)
 "qym" = (
 /obj/structure/closet/crate/chest/lootbox,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /obj/item/ingot/blacksteel,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dragonden)
@@ -61852,7 +61903,10 @@
 	pixel_y = 4
 	},
 /obj/item/natural/feather,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/under/cave/orcdungeon)
 "rtE" = (
@@ -62465,7 +62519,10 @@
 "rDh" = (
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/rogue/twig,
 /area/rogue/under/cave)
 "rDp" = (
@@ -76846,7 +76903,10 @@
 /area/rogue/under/cavewet/bogcaves/sunkencity)
 "vBr" = (
 /obj/structure/closet/crate/chest/lootbox,
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /obj/item/roguegem/random,
 /obj/item/roguegem/diamond,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
@@ -80084,7 +80144,10 @@
 	dir = 5;
 	icon_state = "largetable"
 	},
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/shelter/mountains/decap)
 "wvU" = (
@@ -84272,7 +84335,10 @@
 	pixel_x = 14;
 	pixel_y = 6
 	},
-/obj/effect/spawner/lootdrop/potion_vitals,
+/obj/effect/spawner/lootdrop/potion_vitals{
+	loot = list(/obj/item/reagent_containers/glass/bottle/rogue/berrypoison = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpot = 10, /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 5, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 5, /obj/item/reagent_containers/glass/bottle/rogue/stampot = 10, /obj/item/reagent_containers/glass/bottle/rogue/strongstampot = 5);
+	spawned = null
+	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/orcdungeon)
 "xGh" = (
@@ -84375,9 +84441,12 @@
 /obj/structure/closet/crate/chest/lootbox,
 /obj/item/scomstone,
 /obj/item/rogueweapon/sword/long/blackflamb,
-/obj/effect/spawner/lootdrop/potion_stats,
 /obj/item/clothing/suit/roguetown/armor/plate/blacksteel_full_plate,
 /obj/item/clothing/gloves/roguetown/blacksteel/plategloves,
+/obj/effect/spawner/lootdrop/potion_stats{
+	loot = list(/obj/item/reagent_containers/glass/bottle/alchemical/strpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/perpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/endpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/conpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/intpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/spdpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/lucpot = 10);
+	spawned = null
+	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dragonden)
 "xHG" = (
@@ -86067,7 +86136,10 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/beach)
 "ygb" = (
-/obj/effect/spawner/lootdrop/potion_stats,
+/obj/effect/spawner/lootdrop/potion_stats{
+	loot = list(/obj/item/reagent_containers/glass/bottle/alchemical/strpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/perpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/endpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/conpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/intpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/spdpot = 10, /obj/item/reagent_containers/glass/bottle/alchemical/lucpot = 10);
+	spawned = null
+	},
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/under/cave/skeletoncrypt)
 "ygd" = (
