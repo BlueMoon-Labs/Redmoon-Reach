@@ -32,16 +32,16 @@
 
 	job_traits = list(TRAIT_STEELHEARTED, TRAIT_OUTLANDER, TRAIT_OUTLAW, TRAIT_HERESIARCH)
 	job_subclasses = list(
-		// /datum/advclass/wretch/deserter,
-		// /datum/advclass/wretch/deserter/maa,
-		// /datum/advclass/wretch/berserker,
-		// /datum/advclass/wretch/hedgemage,
-		// /datum/advclass/wretch/necromancer,
+		/datum/advclass/wretch/deserter,
+		/datum/advclass/wretch/deserter/maa,
+		/datum/advclass/wretch/berserker,
+		/datum/advclass/wretch/hedgemage,
+		/datum/advclass/wretch/necromancer,
 		/datum/advclass/wretch/heretic,
 		/datum/advclass/wretch/heretic/wanderer,
-		// /datum/advclass/wretch/outlaw,
-		// /datum/advclass/wretch/outlaw/marauder,
-		// /datum/advclass/wretch/poacher,
+		/datum/advclass/wretch/outlaw,
+		/datum/advclass/wretch/outlaw/marauder,
+		/datum/advclass/wretch/poacher,
 	)
 
 /datum/job/roguetown/wretch/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
