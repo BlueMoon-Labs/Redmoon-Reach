@@ -2518,6 +2518,7 @@
 #include "zzz_redmoon\code\modules\cargo\packsrogue\Brigand.dm"
 #include "zzz_redmoon\code\modules\cargo\packsrogue\Knight.dm"
 #include "zzz_redmoon\code\modules\client\client_procs.dm"
+#include "zzz_redmoon\code\modules\clothing\rogueclothes\hat.dm"
 #include "zzz_redmoon\code\modules\clothing\rogueclothes\neck.dm"
 #include "zzz_redmoon\code\modules\crafting\alchemy.dm"
 #include "zzz_redmoon\code\modules\crafting\sewing&skincraft.dm"
