@@ -455,7 +455,7 @@
 		title = "Псайдон"
 	var/message = input("Что вещает?", "Admin Announce", null, null)  as message
 	if(message)
-		priority_announce("[message]", title = "[title]", sound = 'sound/misc/bell.ogg')
+		priority_announce("[message]", title = "[title]", sound = null)
 		log_admin("Announce: [key_name(usr)] : [message]")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Announce") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
